@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 
     def create
         user = User.new(user_params)
-        render json: user.save? user : {errors: 'Something went wrong. Please try again.'}
+        render json: user.save ? user : {message: user.errors.messages}
+
     end
 
     private
