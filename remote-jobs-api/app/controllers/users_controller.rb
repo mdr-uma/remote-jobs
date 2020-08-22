@@ -6,14 +6,15 @@ class UsersController < ApplicationController
 
     def create
         user = User.new(user_params)
-        render json: user.save ? user : {message: user.errors.messages}
+        render json: user.save ? user : {error: 'something went wrong'}
+
 
     end
 
     private
 
     def user_params
-        params.require(:quote).permit(:email, :password)
+        params.require(:user).permit(:email, :password)
     end
 
 end
