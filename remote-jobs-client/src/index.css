@@ -1,3 +1,143 @@
-body{
-    background-color: darkorange;
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body, #root {
+    height: 100vh;
+    margin: 0;
+}
+
+body, input, select, textarea{
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+
+header{
+    grid-area: header;
+    background-color: #203040;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+header a {
+    color: white;
+}
+
+a:hover{
+    color: orange;
+    text-decoration: none;
+}
+
+header h2{
+    color: white;
+    text-align: none;
+}
+
+h2:hover{
+    color: orange;
+}
+
+h3{
+    font-size: 2.3rem;
+    color: rgb(7, 102, 197);
+    cursor: pointer;
+    text-align: center;
+}
+
+h3:hover{
+    color: purple;
+}
+
+main{
+    grid-area: main;
+}
+
+i{
+    font-size: 200px;
+    color: tomato;
+    position: relative; 
+    left: 35rem;
+    margin: 2rem;
+}
+.fas.fa-coffee{
+    font-size: 50px;
+    color: peru;
+    position: relative;
+    top: 4rem;
+}
+
+.fas.fa-clock{
+    font-size: 60px;
+    color: red;
+    position: relative;
+    bottom: 10rem;
+}
+
+h1{
+    text-align: center;
+}
+
+.form-container{
+    margin: 1rem;
+    padding: 2rem;
+    width: 21rem;
+    height: 25rem;
+    border-radius: 1rem;
+    /* text-align: center; */
+    background-color: rgb(182, 194, 248);
+}
+
+input{
+    border-radius: 5rem;
+    border-style: none;
+    padding: .5rem;
+    outline-style: none;
+}
+
+input:hover{
+    background-color: rgb(225, 239, 245);
+}
+
+[type=submit]{
+    width: 10rem;
+    color: white;
+    background-color: red;
+}
+
+[type=submit]:hover{
+    background-color: green;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job-list{
+    flex: 3 60rem;
+}
+
+.sidbar {
+    margin: 2rem;
+    flex: 1 20rem;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #203040;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
