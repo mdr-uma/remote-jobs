@@ -1,30 +1,21 @@
 import React, {Component} from 'react'
 import SignUpForm from './components/SignUpForm'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
+import BodyImage from './components/BodyImage'
 
 class App extends Component{
     render(){
         return(
             <div className="grid-container">
-                <header>
-                    <h2>Remote Jobs</h2>
-                </header>
+                <NavBar/> 
                 <main>
                     <div className="content">
-                        <div className="job-list">
-                            <i class='fas fa-clock'></i>
-                            <i className='fas fa-laptop-house'></i>
-                            <i className='fas fa-coffee'></i>
-                            <hr></hr>
-                            <h1>Find the best Remote Job</h1>
-                        </div>
-                        <div className="sidebar">
-                            <SignUpForm/>
-                        </div>
+                        <BodyImage/>
+                        <SignUpForm/>
                     </div>
                 </main>
-                <footer>
-                    Copyright © Remote Jobs 2020
-                </footer>
+                <Footer/>
             </div>
         )
     }
