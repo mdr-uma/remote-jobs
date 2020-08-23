@@ -41,7 +41,7 @@ a:hover{
 
 header h2{
     color: white;
-    text-align: none;
+    /* text-align: none; */
 }
 
 h2:hover{
@@ -55,15 +55,59 @@ h3{
     text-align: center;
 }
 
+.logo{
+    margin: 4px;
+}
+
 h3:hover{
     color: purple;
 }
+
+.logo-container,.nav-link,.follow-me{
+    display: flex;
+}
+
+.nav-link {
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.follow-me{
+    justify-content: flex-end;
+    letter-spacing: 15px;
+}
+
+.logo-container{
+    flex: 1;
+}
+
+nav{
+    flex: 2;
+}
+
+.follow-me{
+    flex: 1;
+}
+
 
 main{
     grid-area: main;
 }
 
-i{
+.fas.fa-house-user{
+    color: orange;
+    font-size: 28px;
+    
+}
+
+.fas.fa-laptop{
+    color: orange;
+    font-size: 25px;
+    position: relative; 
+    left: -8px;
+    top: 10px;
+}
+.fas.fa-laptop-house{
     font-size: 200px;
     color: tomato;
     position: relative; 
@@ -75,6 +119,7 @@ i{
     color: peru;
     position: relative;
     top: 4rem;
+    left: 35rem;
 }
 
 .fas.fa-clock{
@@ -82,6 +127,7 @@ i{
     color: red;
     position: relative;
     bottom: 10rem;
+    left: 35rem;
 }
 
 h1{
