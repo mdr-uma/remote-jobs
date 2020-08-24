@@ -6,8 +6,8 @@ const NavBar = (props) => {
         
         <header>
             <div className="logo-container">
-                <i class="fas fa-house-user"></i>
-                <i class="fas fa-laptop"></i>
+                <i className="fas fa-house-user"></i>
+                <i className="fas fa-laptop"></i>
                 <h2 className="logo">Remote Jobs</h2>
             </div>
             <nav>
@@ -18,9 +18,9 @@ const NavBar = (props) => {
                 </div>
             </nav>
             <div className="follow-me">
-                <a href="https://twitter.com/imoohma"><i class="fab fa-twitter-square"></i></a>
-                <a href="https://www.linkedin.com/in/uma-manandhar-4013491b0/"><i class="fab fa-linkedin"></i></a>
-                <a href=" https://github.com/mdr-uma"><i class="fab fa-github-square"></i></a>
+                <a href="https://twitter.com/imoohma"><i className="fab fa-twitter-square"></i></a>
+                <a href="https://www.linkedin.com/in/uma-manandhar-4013491b0/"><i className="fab fa-linkedin"></i></a>
+                <a href=" https://github.com/mdr-uma"><i className="fab fa-github-square"></i></a>
             </div>
         </header>
         
