@@ -130,6 +130,18 @@ main{
     left: 35rem;
 }
 
+img{
+    /* height: 180px; */
+    /* width: 250px; */
+    width: 60%;
+    display: block;
+    margin: 1rem;
+    position: relative; 
+    /* top: 4rem; */
+    left: 25rem;
+    /* border-radius: 5px; */
+}
+
 h1{
     text-align: center;
 }
