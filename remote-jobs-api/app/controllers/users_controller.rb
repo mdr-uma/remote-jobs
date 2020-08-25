@@ -31,7 +31,7 @@ class UsersController < ApplicationController
             cookies.signed[:jwt] = {value: created_jwt, httponly: true, expires: 1.hour.from_now}
             render json: @user
         else
-            rendre json: {error: "Somthing went wrong, Please try again later."}
+            render json: {error: "Somthing went wrong, Please try again later."}
         end
         # render json: user.save ? user : {error: 'something went wrong'}
     end
