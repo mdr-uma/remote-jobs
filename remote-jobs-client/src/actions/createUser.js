@@ -1,4 +1,4 @@
-export const createUser= (data) => {
+export const createUser= (payload) => {
     return(dispatch) => {
         dispatch({type: 'LOADING_USERS'})
         fetch('http://localhost:3000/users', {
@@ -7,10 +7,11 @@ export const createUser= (data) => {
                 'Accept': 'application/json'
             },
             method: 'POST',
-            body: JSON.stringify(data)
+            credentials: "include", 
+            body: JSON.stringify({user:payload})
         })
             .then(response => console.log(response.json()))
-            .then(user => dispatch({ type: 'CREATE_USERS', payload: user }))
+            .then(data => dispatch({ type: 'CREATE_USERS', user: data }))
     }
 
 }
