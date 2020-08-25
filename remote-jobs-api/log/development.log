@@ -1353,3 +1353,1046 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 2.9ms | Allocations: 12684)
 
 
+Started POST "/users" for ::1 at 2020-08-23 17:08:12 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"bebina@hotmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"bebina@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (19.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bebina@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (29.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "bebina@hotmail.com"], ["password", "password"], ["created_at", "2020-08-23 21:08:12.582837"], ["updated_at", "2020-08-23 21:08:12.582837"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers]   [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15.11ms)
+Completed 200 OK in 119ms (Views: 16.0ms | ActiveRecord: 70.2ms | Allocations: 5346)
+
+
+Started GET "/users" for ::1 at 2020-08-23 17:08:27 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (67.01ms)
+Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 3.3ms | Allocations: 14363)
+
+
+Started POST "/users" for ::1 at 2020-08-23 17:10:41 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "um_2003_8@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (6.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.48ms)
+Completed 200 OK in 15ms (Views: 2.1ms | ActiveRecord: 6.7ms | Allocations: 3212)
+
+
+Started GET "/users" for ::1 at 2020-08-23 23:02:20 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.15ms)
+Completed 200 OK in 106ms (Views: 54.2ms | ActiveRecord: 45.6ms | Allocations: 28565)
+
+
+Started GET "/" for ::1 at 2020-08-24 12:14:58 -0400
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/UnU/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/UnU/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.7ms | Allocations: 315)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 1595)
+
+
+Started GET "/users" for ::1 at 2020-08-24 12:42:03 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/UnU/Development/remote-jobs/remote-jobs-api/app/controllers/users_controller.rb:36: syntax error, unexpected '\n', expecting =>
+/Users/UnU/Development/remote-jobs/remote-jobs-api/app/controllers/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:36: syntax error, unexpected '\n', expecting =>
+app/controllers/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:36: syntax error, unexpected '\n', expecting =>
+app/controllers/users_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for ::1 at 2020-08-24 12:42:35 -0400
+  
+SyntaxError (/Users/UnU/Development/remote-jobs/remote-jobs-api/app/controllers/users_controller.rb:49: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:49: syntax error, unexpected end-of-input, expecting end
+app/controllers/users_controller.rb:49: syntax error, unexpected end-of-input, expecting end
+Started GET "/users" for ::1 at 2020-08-24 12:42:54 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-08-24 12:43:09 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms | Allocations: 36076)
+
+
+  
+NoMethodError (undefined method `authenicate_user' for #<UsersController:0x00007fcfc0679138>
+Did you mean?  authenticate_user):
+  
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:181:in `block (2 levels) in halting_and_conditional'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:182:in `block in halting_and_conditional'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/1" for ::1 at 2020-08-24 12:44:21 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.0ms | Allocations: 36115)
+
+
+  
+NoMethodError (undefined method `decode_jwt' for #<UsersController:0x00007fcfc0fa2cf0>):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/users" for ::1 at 2020-08-24 12:52:39 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.09ms)
+Completed 200 OK in 98ms (Views: 56.8ms | ActiveRecord: 34.4ms | Allocations: 28689)
+
+
+Started GET "/users/1" for ::1 at 2020-08-24 12:52:57 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms | Allocations: 36088)
+
+
+  
+NoMethodError (undefined method `decode_jwt' for #<UsersController:0x00007fcfc302d4c0>):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/users" for ::1 at 2020-08-24 12:53:23 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.9ms)
+Completed 200 OK in 39ms (Views: 22.7ms | ActiveRecord: 14.0ms | Allocations: 22807)
+
+
+Started GET "/users" for ::1 at 2020-08-24 12:54:38 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.94ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 2.6ms | Allocations: 14342)
+
+
+Started POST "/users" for ::1 at 2020-08-24 12:55:52 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 0.0ms | Allocations: 2117)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fcfc0db9bc8>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:29:in `create'
+Started GET "/users" for ::1 at 2020-08-24 12:55:58 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.46ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 2.9ms | Allocations: 14317)
+
+
+Started POST "/users" for ::1 at 2020-08-24 12:57:23 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 0.0ms | Allocations: 2045)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fcfc200f160>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:29:in `create'
+Started GET "/users" for ::1 at 2020-08-24 12:57:27 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.38ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 2.2ms | Allocations: 14320)
+
+
+Started POST "/users" for ::1 at 2020-08-24 12:59:23 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 4.8ms | Allocations: 5040)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fcfc2af12b8>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started GET "/users" for ::1 at 2020-08-24 12:59:37 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.88ms)
+Completed 200 OK in 34ms (Views: 22.5ms | ActiveRecord: 11.4ms | Allocations: 17903)
+
+
+Started POST "/users" for ::1 at 2020-08-24 13:08:33 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 0.0ms | Allocations: 2043)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fcfc0658190>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started GET "/users" for ::1 at 2020-08-24 13:08:43 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.03ms)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 6.4ms | Allocations: 14406)
+
+
+Started POST "/users" for ::1 at 2020-08-24 13:16:14 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.0ms | Allocations: 5011)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fcfc0693a10>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started POST "/users" for ::1 at 2020-08-24 13:19:33 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :password[0m
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 9.8ms | Allocations: 6011)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<User:0x00007fcfc2b2aa40>
+Did you mean?  password):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started POST "/users" for ::1 at 2020-08-24 13:25:13 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 251ms (ActiveRecord: 0.0ms | Allocations: 5012)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fcfc1c0a9c0>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started GET "/users" for ::1 at 2020-08-24 13:26:34 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (47.82ms)
+Completed 200 OK in 80ms (Views: 57.3ms | ActiveRecord: 17.6ms | Allocations: 28600)
+
+
+Started POST "/users" for ::1 at 2020-08-24 13:26:52 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.0ms | Allocations: 2133)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fe1cf4adba8>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started GET "/users" for ::1 at 2020-08-24 15:06:02 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.52ms)
+Completed 200 OK in 21ms (Views: 16.2ms | ActiveRecord: 4.6ms | Allocations: 14408)
+
+
+Started GET "/users" for ::1 at 2020-08-24 15:19:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.64ms)
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 5.9ms | Allocations: 14420)
+
+
+Started POST "/login" for ::1 at 2020-08-24 15:20:05 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "session"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 514)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `login'
+Started GET "/users" for ::1 at 2020-08-24 15:22:41 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (54.0ms)
+Completed 200 OK in 94ms (Views: 67.6ms | ActiveRecord: 19.9ms | Allocations: 28600)
+
+
+Started POST "/users" for ::1 at 2020-08-24 15:42:55 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]", "user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 6.7ms | Allocations: 5338)
+
+
+  
+NoMethodError (undefined method `password_digest=' for #<User:0x00007fc493d5c820>
+Did you mean?  password=):
+  
+app/controllers/users_controller.rb:28:in `create'
+Started GET "/users" for ::1 at 2020-08-24 15:52:15 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.84ms)
+Completed 200 OK in 87ms (Views: 70.1ms | ActiveRecord: 16.7ms | Allocations: 24573)
+
+
+Started GET "/login" for ::1 at 2020-08-24 15:53:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-08-24 15:53:42 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.76ms)
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 3.1ms | Allocations: 14338)
+
+
+Started GET "/users/1" for ::1 at 2020-08-24 15:53:49 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms | Allocations: 36106)
+
+
+  
+NoMethodError (undefined method `decode_jwt' for #<UsersController:0x00007fc4954ca980>):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/users" for ::1 at 2020-08-24 15:58:19 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.66ms)
+Completed 200 OK in 52ms (Views: 33.8ms | ActiveRecord: 15.8ms | Allocations: 22814)
+
+
+Started GET "/" for ::1 at 2020-08-24 16:14:23 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/UnU/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/UnU/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 315)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 1595)
+
+
+Started GET "/users" for ::1 at 2020-08-24 16:14:32 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.36ms)
+Completed 200 OK in 71ms (Views: 47.8ms | ActiveRecord: 18.1ms | Allocations: 28611)
+
+
+Started GET "/users" for ::1 at 2020-08-24 21:28:29 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.96ms)
+Completed 200 OK in 21ms (Views: 15.9ms | ActiveRecord: 4.7ms | Allocations: 14406)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsersJobs (20200821222732)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.8ms)[0m  [1m[35mDROP TABLE "users_jobs"[0m
+  [1m[36mprimary::SchemaMigration Destroy (30.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200821222732"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJobs (20200821162405)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mDROP TABLE "jobs"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200821162405"]]
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200821162202)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200821162202"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200821162202)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821162202"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20200821162405)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.1ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "url" character varying, "title" character varying, "company_name" character varying, "job_type" character varying, "candidate_required_location" character varying, "salary" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821162405"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersJobs (20200821222732)
+  [1m[35m (5.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "users_jobs" ("id" bigserial primary key, "user_id" bigint, "job_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_user_id" ON "users_jobs"  ("user_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_job_id" ON "users_jobs"  ("job_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821222732"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-08-25 01:41:56.481294"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mJob Load (6.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (42.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "remote_jobs_development"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "remote_jobs_development"[0m
+  [1m[35m (186.2ms)[0m  [1m[35mCREATE DATABASE "remote_jobs_development" ENCODING = 'unicode'[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE DATABASE "remote_jobs_development" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "jobs" CASCADE[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "url" character varying, "title" character varying, "company_name" character varying, "job_type" character varying, "candidate_required_location" character varying, "salary" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users_jobs" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users_jobs" ("id" bigserial primary key, "user_id" bigint, "job_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_job_id" ON "users_jobs"  ("job_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_user_id" ON "users_jobs"  ("user_id")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200821222732)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200821162202),
+(20200821162405);
+
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-25 01:42:57.108270"], ["updated_at", "2020-08-25 01:42:57.108270"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "48edc0ea6ca6f4804a01cde931a136b86097af98"], ["created_at", "2020-08-25 01:42:57.116650"], ["updated_at", "2020-08-25 01:42:57.116650"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (20.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "jobs" CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "url" character varying, "title" character varying, "company_name" character varying, "job_type" character varying, "candidate_required_location" character varying, "salary" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "users_jobs" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users_jobs" ("id" bigserial primary key, "user_id" bigint, "job_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_job_id" ON "users_jobs"  ("job_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_user_id" ON "users_jobs"  ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-25 01:42:57.205534"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "uma@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "uma@gmail.com"], ["password_digest", "$2a$12$iiAWtvkRImnf4ygUP0rIxejwEEmhVVwZrPZNq8/QfgPKc/NuWZ9da"], ["created_at", "2020-08-25 01:42:57.502372"], ["updated_at", "2020-08-25 01:42:57.502372"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "collin@gmail.com"], ["password_digest", "$2a$12$tg2maRi7wKF84OhMELCl9OKTX6Kmclqc2NEISfBr/rDHqQCaUdWJK"], ["created_at", "2020-08-25 01:42:57.740177"], ["updated_at", "2020-08-25 01:42:57.740177"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "url"], ["LIMIT", 1]]
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "title", "company_name", "job_type", "candidate_required_location", "salary", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["url", "url"], ["title", "title"], ["company_name", "lkajsf"], ["job_type", "lakjsf"], ["candidate_required_location", "lkajsf"], ["salary", "lkajsdf"], ["description", ";lakjsf"], ["created_at", "2020-08-25 01:42:57.758922"], ["updated_at", "2020-08-25 01:42:57.758922"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "url2"], ["LIMIT", 1]]
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "title", "company_name", "job_type", "candidate_required_location", "salary", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["url", "url2"], ["title", "title"], ["company_name", "lkajsf"], ["job_type", "lakjsf"], ["candidate_required_location", "lkajsf"], ["salary", "lkajsdf"], ["description", ";lakjsf"], ["created_at", "2020-08-25 01:42:57.770773"], ["updated_at", "2020-08-25 01:42:57.770773"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2020-08-24 21:43:42 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (17.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.2ms)
+Completed 200 OK in 84ms (Views: 46.7ms | ActiveRecord: 32.1ms | Allocations: 18608)
+
+
+Started GET "/users" for ::1 at 2020-08-24 21:47:02 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.86ms)
+Completed 200 OK in 33ms (Views: 17.3ms | ActiveRecord: 12.2ms | Allocations: 12800)
+
+
+Started GET "/jobs" for ::1 at 2020-08-24 21:47:09 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.3ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 1.5ms | Allocations: 11427)
+
+
+Started GET "/jobs" for ::1 at 2020-08-24 21:47:27 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (15.35ms)
+Completed 200 OK in 34ms (Views: 20.5ms | ActiveRecord: 11.7ms | Allocations: 16039)
+
+
+Started POST "/users" for ::1 at 2020-08-24 23:00:59 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (19.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "um_2003_8@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "um_2003_8@hotmail.com"], ["password_digest", "$2a$12$u1F7Q4ERuchiwhhlAxjOWuA4PrVGS/bLEM8E56z3FYdo9BR2LucoS"], ["created_at", "2020-08-25 03:00:59.641065"], ["updated_at", "2020-08-25 03:00:59.641065"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "um_2003_8@hotmail.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (25.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (53.61ms)
+Completed 200 OK in 383ms (Views: 39.1ms | ActiveRecord: 90.6ms | Allocations: 19313)
+
+
+Started GET "/jobs" for ::1 at 2020-08-24 23:01:17 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.8ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.5ms | Allocations: 11455)
+
+
+Started GET "/users" for ::1 at 2020-08-24 23:05:07 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.54ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 2.6ms | Allocations: 5995)
+
+
+Started GET "/users" for ::1 at 2020-08-24 23:05:12 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.02ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.9ms | Allocations: 6008)
+
+
+Started POST "/users" for ::1 at 2020-08-24 23:46:04 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"umesh@yahoo.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "umesh@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "umesh@yahoo.com"], ["password_digest", "$2a$12$fpdU2ble1l/U6.bor8mvZemRbrnwCy2P6cePgfy0X.BOxWchhaQMG"], ["created_at", "2020-08-25 03:46:04.487197"], ["updated_at", "2020-08-25 03:46:04.487197"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "umesh@yahoo.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.52ms)
+Completed 200 OK in 251ms (Views: 2.5ms | ActiveRecord: 4.9ms | Allocations: 6638)
+
+
