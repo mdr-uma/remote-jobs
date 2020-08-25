@@ -13,10 +13,10 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 let store = createStore(manageUsersAndJobs, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
-<Provider store={store}>
-    <Router>
+<Router>
+    <Provider store={store}>
         <App/>
-    </Router>
-</Provider>,
+    </Provider>
+</Router>,
 document.getElementById('root')
 )
