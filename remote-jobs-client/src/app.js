@@ -1,21 +1,24 @@
 import React, {Component} from 'react'
-import SignUpForm from './components/SignUpForm'
 import NavBar from './components/NavBar'
+import { Switch, Route } from 'react-router-dom'
+import LoginForm from './components/LoginForm'
+import About from './components/About'
+import MainContainer from './containers/MainContainer'
 import Footer from './components/Footer'
-import BodyImage from './components/BodyImage'
+
 
 class App extends Component{
     render(){
         return(
             <div className="grid-container">
                 <NavBar/> 
-                <main>
-                    <div className="content">
-                        <BodyImage/>
-                        <SignUpForm/>
-                    </div>
-                </main>
-                <Footer/>
+                <Switch>
+                    <Route exact path='/' component={MainContainer} />
+                    <Route exact path='/about' component={About} />
+                    <Route exact path='/login' component={LoginForm} />
+                </Switch>
+                <Footer />
+
             </div>
         )
     }
