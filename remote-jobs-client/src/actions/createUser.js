@@ -1,17 +1,14 @@
-export const createUser= (payload) => {
-    return(dispatch) => {
-        dispatch({type: 'LOADING_USERS'})
-        fetch('http://localhost:3000/users', {
+export const createUser = (payload, callback) => async(dispatch) => {
+        const response = await fetch('http://localhost:3000/users', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
             method: 'POST',
-            credentials: "include", 
-            body: JSON.stringify({user:payload})
+            credentials: "include",
+            body: JSON.stringify({ user: payload })
         })
-            .then(response => console.log(response.json()))
-            .then(data => dispatch({ type: 'CREATE_USERS', user: data }))
-    }
-
+            .then(response => response.json())
+           dispatch({ type: 'CREATE_USERS', payload: response })
+        callback()  
 }
