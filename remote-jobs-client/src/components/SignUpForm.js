@@ -1,6 +1,7 @@
 import React from 'react'
 import {createUser} from '../actions/createUser'
 import {connect} from 'react-redux'
+import { withRouter } from 'react-router-dom';
 // import image from '../images/image-1.jpeg'
 
 class SignUpForm extends React.Component{
@@ -17,7 +18,10 @@ class SignUpForm extends React.Component{
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.createUser(this.state)
+        this.props.createUser(this.state, () => {
+            console.log(this.props);
+            this.props.history.push('/about')
+        })
         this.setState({
             email: "",
             password: ""
@@ -46,4 +50,4 @@ class SignUpForm extends React.Component{
     }
 }
 
-export default connect(null, {createUser})(SignUpForm)
+export default connect(null, {createUser})(withRouter(SignUpForm))
