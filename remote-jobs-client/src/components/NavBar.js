@@ -12,9 +12,9 @@ const NavBar = (props) => {
             </div>
             <nav>
                 <div className="nav-link">
-                    <Link className="nav-link" to="#">Home</Link>
-                    <Link className="nav-link" to="#">About</Link>
-                    <Link className="nav-link" to="#">Login</Link>
+                    <Link className="nav-link" to="/">Home</Link>
+                    <Link className="nav-link" to="/about">About</Link>
+                    <Link className="nav-link" to="/login">Login</Link>
                 </div>
             </nav>
             <div className="follow-me">
