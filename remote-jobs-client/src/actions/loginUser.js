@@ -1,6 +1,5 @@
-export const loginUser = (payload) => {
-    return(dispatch) => {
-        fetch("http://localhost:3000/login", {
+export const loginUser = (payload, callback) => async(dispatch) => {
+        const response = await fetch("http://localhost:3000/login", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -10,6 +9,6 @@ export const loginUser = (payload) => {
             body: JSON.stringify({ user: payload })
         })
         .then(res => console.log(res.json()))
-        .then(data => dispatch({type: 'LOGIN_USER', user: data}))
-    }
+        dispatch({type: 'LOGIN_USER', payload: response})
+        callback()
 }
