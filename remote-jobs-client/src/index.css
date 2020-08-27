@@ -146,6 +146,10 @@ h1{
     text-align: center;
 }
 
+p{
+    text-align: center;
+}
+
 .form-container{
     margin: 1rem;
     padding: 2rem;
