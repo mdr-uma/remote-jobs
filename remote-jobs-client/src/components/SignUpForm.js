@@ -53,11 +53,4 @@ class SignUpForm extends React.Component{
     }
 }
 
-const mapStateToProps = ({user}) => {
-    // console.log("user",user);
-    return{
-        user
-    }
-}
-
-export default connect(mapStateToProps, {createUser})(withRouter(SignUpForm))
+export default connect(null, {createUser})(withRouter(SignUpForm))

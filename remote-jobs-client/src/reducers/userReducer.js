@@ -6,9 +6,9 @@ export default function usersReducer(state = {}, action){
             )
 
         case 'LOGIN_USER':
-            return {
-                user: action.payload
-            }
+            return (
+                action.payload
+            )
         default:
             return state
     }

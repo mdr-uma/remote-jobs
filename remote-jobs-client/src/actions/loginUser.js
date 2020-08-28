@@ -8,7 +8,7 @@ export const loginUser = (payload, callback) => async(dispatch) => {
             },
             body: JSON.stringify({ user: payload })
         })
-        .then(res => console.log(res.json()))
-        dispatch({type: 'LOGIN_USER', payload: response})
+        .then(res => res.json())
+        console.log(dispatch({type: 'LOGIN_USER', payload: response}))
         callback()
 }
