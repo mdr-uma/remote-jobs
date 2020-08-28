@@ -9,6 +9,6 @@ export const createUser = (payload, callback) => async(dispatch) => {
             body: JSON.stringify({ user: payload })
         })
             .then(response => response.json())
-           dispatch({ type: 'CREATE_USERS', payload: response })
+           dispatch({ type: 'CREATE_USER', payload: response })
         callback()  
 }
