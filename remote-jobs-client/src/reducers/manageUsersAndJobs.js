@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import usersReducer from '../reducers/usersReducer'
+import userReducer from './userReducer'
 import jobsReducer from '../reducers/jobsReducer'
 
 const rootReducer = combineReducers({
-    users: usersReducer,
+    user: userReducer,
     jobs: jobsReducer
 })
 
