@@ -5,7 +5,7 @@ import LoginForm from './LoginForm'
 import About from './About'
 import JobsContainer from '../containers/JobsContainer'
 import Footer from './Footer'
-import DashBoard from './DashBoard'
+import UserContainer from '../containers/UserContainer'
 
 
 class App extends Component{
@@ -17,7 +17,7 @@ class App extends Component{
                     <Route exact path='/' component={JobsContainer} /> 
                     <Route exact path='/about' component={About} /> 
                     <Route exact path='/login' component={LoginForm} />
-                    <Route exact path='/dashboard' component={DashBoard} />
+                    <Route exact path='/dashboard' component={UserContainer} />
                 </BrowserRouter>
                 <Footer /> 
                 

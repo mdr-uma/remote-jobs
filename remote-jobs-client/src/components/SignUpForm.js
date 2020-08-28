@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 
 class SignUpForm extends React.Component{
     state = {
+        username: "",
         email: "",
         password: ""
     }
@@ -19,10 +20,10 @@ class SignUpForm extends React.Component{
     handleSubmit = e => {
         e.preventDefault()
         this.props.createUser(this.state, () => {
-            console.log(this.props);
-            this.props.history.push('/about')
+            this.props.history.push('/dashboard')
         })
         this.setState({
+            username: "",
             email: "",
             password: ""
         })
@@ -35,6 +36,8 @@ class SignUpForm extends React.Component{
                     <div className="form-container">
                         <h3>Sign Up</h3>
                         <form onSubmit={this.handleSubmit}>
+                            <label>Username: </label>
+                            <input type="text" placeholder="username" value={this.state.username} name="username" onChange={this.handleChange}/> <br/><br/>
                             <label>Email Address: </label>
                             <input type="text" placeholder="eg@gmail.com" value={this.state.email} name="email" onChange={this.handleChange}/> <br/><br/>
                             <label>Password: </label>
@@ -50,4 +53,11 @@ class SignUpForm extends React.Component{
     }
 }
 
-export default connect(null, {createUser})(withRouter(SignUpForm))
+const mapStateToProps = ({user}) => {
+    // console.log("user",user);
+    return{
+        user
+    }
+}
+
+export default connect(mapStateToProps, {createUser})(withRouter(SignUpForm))
