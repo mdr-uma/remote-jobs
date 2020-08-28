@@ -6,11 +6,7 @@ import JobSearch from '../components/JobSearch'
 import {fetchJobs} from '../actions/fetchJobs'
 import {connect} from 'react-redux'
 
-class MainContainer extends Component {
-    state = {
-        jobs: []
-    }
-
+class JobsContainer extends Component {
     componentDidMount() {
         this.props.fetchJobs()
     }
@@ -22,8 +18,8 @@ class MainContainer extends Component {
                     <div className="content">
                         <BodyImage />
                         <SignUpForm />
-                        <JobList jobs={this.state.jobs}/>
-                        <JobSearch fetchJobs={this.fetchJobs}/>
+                        <JobList jobs={this.props.jobs}/>
+                        {/* <JobSearch fetchJobs={this.fetchJobs}/> */}
                     </div>
                 </main>
             </div>
@@ -31,16 +27,10 @@ class MainContainer extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({ jobs }) => {
     return{
-        jobs: state.jobs
+        jobs
     }
 }
 
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         fetchJobs: () => dispatch(fetchJobs())
-//     }
-// }
-
-export default connect(mapStateToProps, {fetchJobs})(MainContainer)
+export default connect(mapStateToProps, {fetchJobs})(JobsContainer)
