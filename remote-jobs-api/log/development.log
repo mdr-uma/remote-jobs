@@ -4020,3 +4020,249 @@ Processing by SessionsController#login as JSON
 Completed 200 OK in 253ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 2791)
 
 
+Started POST "/users" for ::1 at 2020-08-28 00:08:44 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"blah12", "email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (6.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "blah12@blah.com"], ["password_digest", "$2a$12$Vo83f3mzY53mwdAxmZbYEOQyeYHQ5TXCMtwFNPsOkol.ufsnjA/5K"], ["created_at", "2020-08-28 04:08:44.506513"], ["updated_at", "2020-08-28 04:08:44.506513"], ["username", "blah12"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "blah12@blah.com"], ["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (1.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 46]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (6.4ms)
+Completed 200 OK in 299ms (Views: 6.6ms | ActiveRecord: 22.1ms | Allocations: 6692)
+
+
+Started POST "/login" for ::1 at 2020-08-28 00:19:29 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "um_2003_8@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 167ms (ActiveRecord: 9.5ms | Allocations: 78717)
+
+
+  
+NameError (undefined local variable or method `binging' for #<SessionsController:0x00007fb605e091c0>
+Did you mean?  binding):
+  
+app/controllers/sessions_controller.rb:4:in `login'
+Started POST "/login" for ::1 at 2020-08-28 00:20:28 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "um_2003_8@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (29.76ms)
+Completed 200 OK in 32901ms (Views: 44.6ms | ActiveRecord: 14.1ms | Allocations: 31833)
+
+
+Started POST "/login" for ::1 at 2020-08-28 00:21:52 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah11@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah11@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah11@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 45]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 23795ms (Views: 2.4ms | ActiveRecord: 1.0ms | Allocations: 12525)
+
+
+Started POST "/login" for ::1 at 2020-08-28 00:23:47 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah11@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah11@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah11@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 404 Not Found in 19202ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 9187)
+
+
+Started POST "/login" for ::1 at 2020-08-28 00:26:25 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah10@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah10@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah10@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 44]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.9ms)
+Completed 200 OK in 10524ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 10511)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (100.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "remote_jobs_development"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "remote_jobs_development"[0m
+  [1m[35m (281.5ms)[0m  [1m[35mCREATE DATABASE "remote_jobs_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE "remote_jobs_development" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "jobs" CASCADE[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "url" character varying, "title" character varying, "company_name" character varying, "job_type" character varying, "candidate_required_location" character varying, "salary" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (35.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "username" character varying)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users_jobs" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users_jobs" ("id" bigserial primary key, "user_id" bigint, "job_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_job_id" ON "users_jobs"  ("job_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_user_id" ON "users_jobs"  ("user_id")[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200828034303)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200821162202),
+(20200821162405),
+(20200821222732);
+
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-28 04:27:34.452873"], ["updated_at", "2020-08-28 04:27:34.452873"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "e24839c1574a92d9baa35785f66bbda214590861"], ["created_at", "2020-08-28 04:27:34.481423"], ["updated_at", "2020-08-28 04:27:34.481423"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "jobs" CASCADE[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "url" character varying, "title" character varying, "company_name" character varying, "job_type" character varying, "candidate_required_location" character varying, "salary" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "username" character varying)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "users_jobs" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "users_jobs" ("id" bigserial primary key, "user_id" bigint, "job_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_job_id" ON "users_jobs"  ("job_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_user_id" ON "users_jobs"  ("user_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-28 04:27:34.585591"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "uma@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "uma@gmail.com"], ["password_digest", "$2a$12$6cGGo1QOpk1ck9QAfkSzV.J8ciy7jDzHEG5qVy9RW4TNLwQzbxKJ."], ["created_at", "2020-08-28 04:27:34.906656"], ["updated_at", "2020-08-28 04:27:34.906656"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "collin@gmail.com"], ["password_digest", "$2a$12$zeyo7HP7TW6wkU13S607S.bveduIo7LKmpmngJG4YoaOz.Yh1Prcy"], ["created_at", "2020-08-28 04:27:35.160773"], ["updated_at", "2020-08-28 04:27:35.160773"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "url"], ["LIMIT", 1]]
+  [1m[36mJob Create (0.5ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "title", "company_name", "job_type", "candidate_required_location", "salary", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["url", "url"], ["title", "title"], ["company_name", "lkajsf"], ["job_type", "lakjsf"], ["candidate_required_location", "lkajsf"], ["salary", "lkajsdf"], ["description", ";lakjsf"], ["created_at", "2020-08-28 04:27:35.182170"], ["updated_at", "2020-08-28 04:27:35.182170"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJob Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "url2"], ["LIMIT", 1]]
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "title", "company_name", "job_type", "candidate_required_location", "salary", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["url", "url2"], ["title", "title"], ["company_name", "lkajsf"], ["job_type", "lakjsf"], ["candidate_required_location", "lkajsf"], ["salary", "lkajsdf"], ["description", ";lakjsf"], ["created_at", "2020-08-28 04:27:35.187845"], ["updated_at", "2020-08-28 04:27:35.187845"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/users" for ::1 at 2020-08-28 00:28:33 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"blah1", "email"=>"blah1@blah.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (10.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah1@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "blah1@blah.com"], ["password_digest", "$2a$12$IvmIvq.vq6M5ZxoDYwhjGOp7plEp7DmqCuc3uQjX5YpS7miF9cJn."], ["created_at", "2020-08-28 04:28:33.944703"], ["updated_at", "2020-08-28 04:28:33.944703"], ["username", "blah1"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "blah1@blah.com"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (2.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (32.11ms)
+Completed 200 OK in 356ms (Views: 31.8ms | ActiveRecord: 44.3ms | Allocations: 20068)
+
+
+Started POST "/login" for ::1 at 2020-08-28 00:29:19 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah1@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah1@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah1@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:7:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.73ms)
+Completed 200 OK in 260ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 2795)
+
+
+Started POST "/login" for ::1 at 2020-08-28 17:06:25 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah11@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah11@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah11@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 404 Not Found in 30ms (Views: 21.8ms | ActiveRecord: 2.3ms | Allocations: 2636)
+
+
+Started POST "/users" for ::1 at 2020-08-28 17:06:52 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"uma", "email"=>"uma@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "uma@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (5.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "uma@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 247ms (Views: 0.4ms | ActiveRecord: 6.5ms | Allocations: 5625)
+
+
+Started POST "/users" for ::1 at 2020-08-28 17:13:13 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"blah2", "email"=>"blah2", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 5842)
+
+
+Started POST "/users" for ::1 at 2020-08-28 17:13:38 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"blah12", "email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "blah12@blah.com"], ["password_digest", "$2a$12$xbh/tGyMnj19WArA/aUhQOEYp28oSMNgEblBhFIbCh4.v7AgJ9.86"], ["created_at", "2020-08-28 21:13:38.863836"], ["updated_at", "2020-08-28 21:13:38.863836"], ["username", "blah12"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "blah12@blah.com"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (3.93ms)
+Completed 200 OK in 251ms (Views: 3.2ms | ActiveRecord: 8.5ms | Allocations: 6648)
+
+
+Started POST "/login" for ::1 at 2020-08-28 17:14:09 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:7:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.42ms)
+Completed 200 OK in 234ms (Views: 2.2ms | ActiveRecord: 0.9ms | Allocations: 2620)
+
+
