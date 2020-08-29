@@ -6,6 +6,7 @@ import About from './About'
 import JobsContainer from '../containers/JobsContainer'
 import Footer from './Footer'
 import UserContainer from '../containers/UserContainer'
+import SearchResult from './SearchResult'
 
 
 class App extends Component{
@@ -18,6 +19,7 @@ class App extends Component{
                     <Route exact path='/about' component={About} /> 
                     <Route exact path='/login' component={LoginForm} />
                     <Route exact path='/dashboard' component={UserContainer} />
+                    <Route exact path='/results' component={SearchResult} />
                 </BrowserRouter>
                 <Footer /> 
                 
