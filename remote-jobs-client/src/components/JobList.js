@@ -2,8 +2,6 @@ import React from 'react'
 import Button from './Button'
 import dateFormat from 'dateformat'
 
-// const dateOption = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' }
-
 const renderJobs = (jobs) => {
     return jobs.map((job, index) => {
         let date = job.date
@@ -22,7 +20,6 @@ const renderJobs = (jobs) => {
 }
 
 const JobList = props => {
-    // console.log("props",props);
     return(
         <div className="job-container">
             {renderJobs(props.jobs)}
