@@ -6,6 +6,11 @@ const JobsReducer = (state= [], action) => {
                 action.jobs
             )
 
+        case 'SEARCH_JOBS':
+            return (
+                action.jobs
+            )
+            
         default:
             return state
     }
