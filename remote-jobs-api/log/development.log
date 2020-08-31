@@ -4409,3 +4409,31 @@ Processing by SessionsController#login as JSON
 Completed 200 OK in 251ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1141)
 
 
+Started POST "/users" for ::1 at 2020-08-31 15:37:00 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Aiden", "email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (6.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (13.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (36.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "aiden@hotmail.com"], ["password_digest", "$2a$12$LnjOwVBb5shSN6AkPCbqzuq6rGGh.zq6kRf2w4QiTZhyRmEtrnz96"], ["created_at", "2020-08-31 19:37:00.962104"], ["updated_at", "2020-08-31 19:37:00.962104"], ["username", "Aiden"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "aiden@hotmail.com"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (83.81ms)
+Completed 200 OK in 484ms (Views: 85.5ms | ActiveRecord: 102.0ms | Allocations: 15459)
+
+
+Started POST "/login" for ::1 at 2020-08-31 15:39:17 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 248ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1143)
+
+
