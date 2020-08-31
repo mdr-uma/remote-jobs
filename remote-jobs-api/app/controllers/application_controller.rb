@@ -2,12 +2,12 @@ class ApplicationController < ActionController::API
     include ::ActionController::Cookies
 
     def issue_token(payload)
-        JWT.encode(payload, "ES384")
+        JWT.encode(payload, "secret", "HS256")
     end
 
     def authenticate_user
         jwt = cookies.signed[:jwt]
-        decode_jwt(jwt)
+        JWT.decode(jwt, "secret", "HS256")
     end
 end
 
