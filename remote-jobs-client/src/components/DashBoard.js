@@ -13,9 +13,7 @@ const DashBoard = (props) => {
             <div className="saved-job">
 
             </div>
-        </div>
-
-        
+        </div>  
     )
 }
 
