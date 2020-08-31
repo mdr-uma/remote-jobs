@@ -7,7 +7,7 @@ const BodyImage = () => {
             {/* <i className='fas fa-laptop-house'></i> */}
             <img src={image} alt=""/>
             <hr></hr>
-            <h1>Find the best Remote Job</h1>
+            <h1>Find the best Remote Job <i className="fas fa-hand-point-down"></i></h1>
         </div>
     )
 }
