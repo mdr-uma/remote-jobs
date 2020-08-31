@@ -41,7 +41,6 @@ a:hover{
 
 header h2{
     color: white;
-    /* text-align: none; */
 }
 
 h2:hover{
@@ -194,6 +193,17 @@ label{
     background-color: green;
 }
 
+.search-container{
+    position: relative;
+    left: 8%;
+}
+
+.search-image{
+    width: 70%;
+    height: 95%;
+    margin: auto;
+}
+
 .search input{
     border-color: black;
     position: relative;
@@ -209,6 +219,10 @@ label{
     margin: 5px 10px 30px 0;
     position: relative;
     left: 35%;
+}
+
+.fas.fa-hand-point-down{
+    color: royalblue;
 }
 
 
@@ -276,6 +290,14 @@ h6{
 
 .fas.fa-save:hover{
     color: rgb(10, 143, 5);
+}
+
+.side-bar{
+    background-color: rgb(182, 194, 248);
+    width: 10%;
+    height: 100vh;
+    text-align: center;
+    padding: 1%;
 }
 
 footer{
