@@ -17,11 +17,9 @@ ActiveRecord::Schema.define(version: 2020_08_28_034303) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "url"
-    t.string "title"
-    t.string "company_name"
-    t.string "job_type"
-    t.string "candidate_required_location"
-    t.string "salary"
+    t.string "company"
+    t.string "date"
+    t.string "position"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
