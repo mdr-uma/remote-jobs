@@ -4295,3 +4295,117 @@ Processing by SessionsController#login as JSON
 Completed 200 OK in 242ms (Views: 4.7ms | ActiveRecord: 1.4ms | Allocations: 2607)
 
 
+Started GET "/jobs" for ::1 at 2020-08-29 22:57:27 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (18.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.58ms)
+Completed 200 OK in 100ms (Views: 64.1ms | ActiveRecord: 33.6ms | Allocations: 11551)
+
+
+Started GET "/jobs" for ::1 at 2020-08-29 22:57:36 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.03ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 1.2ms | Allocations: 4500)
+
+
+Started POST "/login" for ::1 at 2020-08-29 23:08:18 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:11:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (9.31ms)
+Completed 200 OK in 1354382ms (Views: 15.7ms | ActiveRecord: 2.4ms | Allocations: 241054)
+
+
+Started POST "/login" for ::1 at 2020-08-29 23:35:04 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Started POST "/login" for ::1 at 2020-08-29 23:36:50 -0400
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.36ms)
+Completed 200 OK in 23281ms (Views: 2.9ms | ActiveRecord: 7.6ms | Allocations: 20417)
+
+
+Started POST "/login" for ::1 at 2020-08-29 23:47:14 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers]   [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:10:in `login'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (31.03ms)
+Completed 200 OK in 322ms (Views: 0.4ms | ActiveRecord: 17.1ms | Allocations: 17774)
+
+
+Started POST "/login" for ::1 at 2020-08-29 23:59:56 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/UnU/Development/remote-jobs/remote-jobs-api/app/controllers/sessions_controller.rb:17: else without rescue is useless
+        else
+        ^~~~
+/Users/UnU/Development/remote-jobs/remote-jobs-api/app/controllers/sessions_controller.rb:27: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/sessions_controller.rb:17: else without rescue is useless
+app/controllers/sessions_controller.rb:27: syntax error, unexpected end-of-input, expecting end
+app/controllers/sessions_controller.rb:17: else without rescue is useless
+app/controllers/sessions_controller.rb:27: syntax error, unexpected end-of-input, expecting end
+Started POST "/login" for ::1 at 2020-08-30 00:01:29 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 8.7ms | Allocations: 44240)
+
+
+  
+NoMethodError (undefined method `respond_to' for #<SessionsController:0x00007fb92f435d88>
+Did you mean?  respond_to?):
+  
+app/controllers/sessions_controller.rb:11:in `login'
+Started POST "/login" for ::1 at 2020-08-30 00:06:19 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 269ms (Views: 2.0ms | ActiveRecord: 5.7ms | Allocations: 7235)
+
+
+Started POST "/login" for ::1 at 2020-08-30 00:08:13 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 253ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1157)
+
+
+Started POST "/login" for ::1 at 2020-08-30 00:10:10 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 251ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1141)
+
+
