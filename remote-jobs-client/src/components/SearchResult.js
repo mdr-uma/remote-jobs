@@ -7,12 +7,12 @@ class SearchResult extends Component {
     render() {
         return (
             <div>
-                <main>
-                    <div className="content">
-                        <BodyImage />
-                        <JobList jobs={this.props.jobs} />
-                    </div>
-                </main>
+                <div className="search-image">
+                    <BodyImage />
+                </div>
+                <div className="search-container">
+                    <JobList jobs={this.props.jobs} />
+                </div>
             </div>
         )
     }
