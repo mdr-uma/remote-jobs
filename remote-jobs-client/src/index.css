@@ -93,41 +93,15 @@ main{
     grid-area: main;
 }
 
-.fas.fa-house-user{
-    color: orange;
-    font-size: 28px;
-    
-}
 
-.fas.fa-laptop{
-    color: orange;
-    font-size: 25px;
-    position: relative; 
-    left: -8px;
-    top: 10px;
-}
 .fas.fa-laptop-house{
-    font-size: 200px;
-    color: tomato;
+    font-size: 28px;
+    color: orange;
     position: relative; 
-    left: 35rem;
-    margin: 2rem;
-}
-.fas.fa-coffee{
-    font-size: 50px;
-    color: peru;
-    position: relative;
-    top: 4rem;
-    left: 35rem;
+    left: -8;
+    top: 5px;
 }
 
-.fas.fa-clock{
-    font-size: 60px;
-    color: red;
-    position: relative;
-    bottom: 10rem;
-    left: 35rem;
-}
 
 .job-list img{
     width: 60%;
@@ -172,10 +146,6 @@ p{
 input:hover{
     background-color: rgb(225, 239, 245);
 }
-
-/* label{
-    margin-left: 2rem;
-} */
 
 [type=submit]{
     width: 9rem;

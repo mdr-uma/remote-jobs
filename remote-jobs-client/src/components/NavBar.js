@@ -6,8 +6,7 @@ const NavBar = (props) => {
         
         <header>
             <div className="logo-container">
-                <i className="fas fa-house-user"></i>
-                <i className="fas fa-laptop"></i>
+                <i className='fas fa-laptop-house'></i>
                 <h2 className="logo">Remote Jobs</h2>
             </div>
             <nav>
