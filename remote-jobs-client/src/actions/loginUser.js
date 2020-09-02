@@ -9,6 +9,7 @@ export const loginUser = (payload, callback) => async(dispatch) => {
             body: JSON.stringify({ user: payload })
         })
         .then(res => res.json())
+        localStorage.setItem("token", response.token)
         console.log(dispatch({type: 'LOGIN_USER', payload: response}))
         callback()
 }
