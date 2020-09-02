@@ -264,6 +264,11 @@ h6{
     padding: 1%;
 }
 
+.saved-job{
+    position: absolute;
+    bottom: 180px;
+}
+
 footer{
     grid-area: footer;
     background-color: #203040;
