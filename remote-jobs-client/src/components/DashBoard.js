@@ -1,4 +1,8 @@
 import React from 'react'
+import {Button} from 'react-bootstrap'
+import JobList from './JobList'
+
+
 
 const DashBoard = (props) => {
     return(
@@ -9,9 +13,11 @@ const DashBoard = (props) => {
             </div>
             <div className="side-bar">
                 Hi, {props.userName}!
+                <br/>
+                <Button variant="outline-primary" onClick={()=>props.logOut()}>Log Out</Button>
             </div>
             <div className="saved-job">
-
+                <JobList jobs={props.savedJobs}/>
             </div>
         </div>  
     )
