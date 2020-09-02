@@ -9,6 +9,10 @@ export default function usersReducer(state = {}, action){
             return (
                 action.payload
             )
+
+        case 'LOGOUT_USER':
+            return {}
+
         default:
             return state
     }
