@@ -4437,3 +4437,883 @@ Processing by SessionsController#login as JSON
 Completed 200 OK in 248ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 1143)
 
 
+Started POST "/login" for ::1 at 2020-08-31 16:37:37 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 265ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 1221)
+
+
+Started POST "/login" for ::1 at 2020-08-31 16:42:30 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 34.1ms | Allocations: 7415)
+
+
+  
+NoMethodError (undefined method `group' for "secret":String):
+  
+app/controllers/application_controller.rb:5:in `issue_token'
+app/controllers/sessions_controller.rb:5:in `login'
+Started POST "/login" for ::1 at 2020-08-31 16:45:21 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.21ms)
+Completed 200 OK in 279ms (Views: 2.1ms | ActiveRecord: 6.4ms | Allocations: 6961)
+
+
+Started POST "/login" for ::1 at 2020-08-31 17:20:09 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 267ms (Views: 1.8ms | ActiveRecord: 1.0ms | Allocations: 1223)
+
+
+Started POST "/login" for ::1 at 2020-08-31 17:38:23 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 268ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 1223)
+
+
+Started POST "/login" for ::1 at 2020-08-31 17:44:37 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "um_2003_8@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.3ms)
+Completed 404 Not Found in 8ms (Views: 1.8ms | ActiveRecord: 3.2ms | Allocations: 842)
+
+
+Started POST "/login" for ::1 at 2020-08-31 17:44:50 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.64ms)
+Completed 200 OK in 260ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 1137)
+
+
+  [1m[35m (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUsernameToUsers (20200828034303)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.7ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "username"[0m
+  [1m[36mprimary::SchemaMigration Destroy (24.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200828034303"]]
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsersJobs (20200821222732)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.9ms)[0m  [1m[35mDROP TABLE "users_jobs"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200821222732"]]
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateJobs (20200821162405)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.3ms)[0m  [1m[35mDROP TABLE "jobs"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200821162405"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200821162202)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200821162202"]]
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2278796953649782020)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20200821162202)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (27.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821162202"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateJobs (20200821162405)
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" bigserial primary key, "url" character varying, "company" character varying, "date" character varying, "position" character varying, "description" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821162405"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsersJobs (20200821222732)
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "users_jobs" ("id" bigserial primary key, "user_id" bigint, "job_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_user_id" ON "users_jobs"  ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_users_jobs_on_job_id" ON "users_jobs"  ("job_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200821222732"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUsernameToUsers (20200828034303)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "username" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200828034303"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (10.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-08-31 21:58:58.027152"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2278796953649782020)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/jobs" for ::1 at 2020-08-31 18:48:42 -0400
+  [1m[35m (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98692", "company"=>"Doximity", "date"=>"2020-08-31T08:42:27-07:00", "position"=>"Software Engineer, Security", "description"=>"Doximity is transforming the health care industry. Our mission is to help clinicians be more productive, informed, and connected. As a software engineer, you'll work within cross-functional delivery teams alongside other engineers, designers, and product managers in building soft..."}}
+Started POST "/login" for ::1 at 2020-08-31 18:50:38 -0400
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98692"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (13.2ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98692"], ["company", "Doximity"], ["date", "2020-08-31T08:42:27-07:00"], ["position", "Software Engineer, Security"], ["description", "Doximity is transforming the health care industry. Our mission is to help clinicians be more productive, informed, and connected. As a software engineer, you'll work within cross-functional delivery teams alongside other engineers, designers, and product managers in building soft..."], ["created_at", "2020-08-31 22:51:14.656528"], ["updated_at", "2020-08-31 22:51:14.656528"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+[active_model_serializers]   [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:15:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (59.24ms)
+Completed 200 OK in 152231ms (Views: 54.1ms | ActiveRecord: 62.8ms | Allocations: 108080)
+
+
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 404 Not Found in 22ms (Views: 4.5ms | ActiveRecord: 6.3ms | Allocations: 3207)
+
+
+Started POST "/login" for ::1 at 2020-08-31 18:52:55 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 774)
+
+
+Started POST "/login" for ::1 at 2020-08-31 18:53:27 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 5ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 774)
+
+
+Started POST "/login" for ::1 at 2020-08-31 18:56:27 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 404 Not Found in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 756)
+
+
+Started POST "/users" for ::1 at 2020-08-31 18:57:43 -0400
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"uma", "email"=>"mdr.uma28@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mdr.uma28@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "mdr.uma28@gmail.com"], ["password_digest", "$2a$12$nkhtqS8gUybbJU1RyGO8h./QlGImJziVqSsIvy2rd/6XdO5/pjX3u"], ["created_at", "2020-08-31 22:57:43.512277"], ["updated_at", "2020-08-31 22:57:43.512277"], ["username", "uma"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "mdr.uma28@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (24.98ms)
+Completed 200 OK in 306ms (Views: 17.7ms | ActiveRecord: 15.8ms | Allocations: 13933)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 18:58:12 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98692", "company"=>"Doximity", "date"=>"2020-08-31T08:42:27-07:00", "position"=>"Software Engineer, Security", "description"=>"Doximity is transforming the health care industry. Our mission is to help clinicians be more productive, informed, and connected. As a software engineer, you'll work within cross-functional delivery teams alongside other engineers, designers, and product managers in building soft...", "user_id"=>1}}
+Completed 500 Internal Server Error in 98359ms (ActiveRecord: 0.0ms | Allocations: 14339)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Job.):
+  
+app/controllers/jobs_controller.rb:14:in `create'
+Started POST "/login" for ::1 at 2020-08-31 20:58:16 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"um_2003_8@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "um_2003_8@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 404 Not Found in 14ms (Views: 1.8ms | ActiveRecord: 2.9ms | Allocations: 4119)
+
+
+Started POST "/login" for ::1 at 2020-08-31 20:58:30 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 404 Not Found in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 775)
+
+
+Started POST "/login" for ::1 at 2020-08-31 20:58:48 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"blah12@blah.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blah12@blah.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 404 Not Found in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 775)
+
+
+Started POST "/login" for ::1 at 2020-08-31 20:59:05 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"mdr.uma28@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"mdr.uma28@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mdr.uma28@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 264ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 4980)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 20:59:15 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98699", "company"=>"Mphasis-Stelligent", "date"=>"2020-08-31T11:52:23-07:00", "position"=>"AWS Cloud Consultant", "description"=>"7+ years of technical experience in AWS Cloud development, operations, or joint DevOps responsibilities.AWS hands on coding and some travel to customers for consulting to solve complex business problems.&nbsp;- Need to have multiple successful customer engagements providing conti...", "user_id"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (1.5ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["company", "Mphasis-Stelligent"], ["date", "2020-08-31T11:52:23-07:00"], ["position", "AWS Cloud Consultant"], ["description", "7+ years of technical experience in AWS Cloud development, operations, or joint DevOps responsibilities.AWS hands on coding and some travel to customers for consulting to solve complex business problems.&nbsp;- Need to have multiple successful customer engagements providing conti..."], ["created_at", "2020-09-01 00:59:50.492613"], ["updated_at", "2020-09-01 00:59:50.492613"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 50181ms (ActiveRecord: 9.3ms | Allocations: 34340)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/users" for ::1 at 2020-08-31 21:03:43 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"collin", "email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Create (6.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "collin@gmail.com"], ["password_digest", "$2a$12$vFMAyJaZVES82TJPSAmIiOY.KCYv1/OWckPkwPiP1LsLtEj8cUwaa"], ["created_at", "2020-09-01 01:03:43.641402"], ["updated_at", "2020-09-01 01:03:43.641402"], ["username", "collin"]]
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:28:in `create'
+  [1m[36mUser Exists? (5.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "collin@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `create'
+[active_model_serializers]   [1m[36mJob Load (1.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:32:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (28.85ms)
+Completed 200 OK in 342ms (Views: 41.5ms | ActiveRecord: 34.9ms | Allocations: 19971)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:04:02 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98696", "company"=>"Bitovi", "date"=>"2020-08-31T10:45:35-07:00", "position"=>"Angular Developer Consultant", "description"=>"ABOUT BITOVI:Bitovi helps companies create better web applications.&nbsp;&nbsp;We have a track record of designing and building high-profile and amazing web applications through our active Consulting practice.&nbsp; Our apps are built with tests, full docs and a deployment proces...", "user_id"=>2}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (pry):2:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ (pry):3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98696"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Create (3.3ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98696"], ["company", "Bitovi"], ["date", "2020-08-31T10:45:35-07:00"], ["position", "Angular Developer Consultant"], ["description", "ABOUT BITOVI:Bitovi helps companies create better web applications.&nbsp;&nbsp;We have a track record of designing and building high-profile and amazing web applications through our active Consulting practice.&nbsp; Our apps are built with tests, full docs and a deployment proces..."], ["created_at", "2020-09-01 01:07:22.591853"], ["updated_at", "2020-09-01 01:07:22.591853"]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 214566ms (ActiveRecord: 4.6ms | Allocations: 41254)
+
+
+  
+NoMethodError (undefined method `find' for nil:NilClass):
+  
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/login" for ::1 at 2020-08-31 21:08:44 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 279ms (Views: 2.8ms | ActiveRecord: 8.2ms | Allocations: 8347)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:08:54 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98699", "company"=>"Mphasis-Stelligent", "date"=>"2020-08-31T11:52:23-07:00", "position"=>"AWS Cloud Consultant", "description"=>"7+ years of technical experience in AWS Cloud development, operations, or joint DevOps responsibilities.AWS hands on coding and some travel to customers for consulting to solve complex business problems.&nbsp;- Need to have multiple successful customer engagements providing conti...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mJob Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[35m (6.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/login" for ::1 at 2020-08-31 21:11:12 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"coll", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"coll", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "coll"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 404 Not Found in 15ms (Views: 2.4ms | ActiveRecord: 3.3ms | Allocations: 4119)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:11:25 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 269ms (Views: 0.4ms | ActiveRecord: 5.9ms | Allocations: 4998)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:11:34 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98699", "company"=>"Mphasis-Stelligent", "date"=>"2020-08-31T11:52:23-07:00", "position"=>"AWS Cloud Consultant", "description"=>"7+ years of technical experience in AWS Cloud development, operations, or joint DevOps responsibilities.AWS hands on coding and some travel to customers for consulting to solve complex business problems.&nbsp;- Need to have multiple successful customer engagements providing conti...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):3:in `create'
+  [1m[36mJob Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ (pry):3:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ (pry):3:in `create'
+Started POST "/login" for ::1 at 2020-08-31 21:14:55 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 273ms (Views: 1.1ms | ActiveRecord: 7.5ms | Allocations: 8343)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:15:04 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98650", "company"=>"Tynker", "date"=>"2020-08-29T08:18:30-07:00", "position"=>"Software Engineer", "description"=>"Software Engineer&nbsp;- Video Curriculum DevelopmentTynker is looking for an experienced&nbsp;software engineer&nbsp;with lots of creative ideas! In this role, you will design, develop and maintain technical&nbsp;video content for Tynker's student audience who are learning to co...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98650"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98650"], ["company", "Tynker"], ["date", "2020-08-29T08:18:30-07:00"], ["position", "Software Engineer"], ["description", "Software Engineer&nbsp;- Video Curriculum DevelopmentTynker is looking for an experienced&nbsp;software engineer&nbsp;with lots of creative ideas! In this role, you will design, develop and maintain technical&nbsp;video content for Tynker's student audience who are learning to co..."], ["created_at", "2020-09-01 01:15:04.731385"], ["updated_at", "2020-09-01 01:15:04.731385"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mUsersJob Create (6.9ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 4], ["created_at", "2020-09-01 01:15:28.478037"], ["updated_at", "2020-09-01 01:15:28.478037"]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with UsersJob (0.56ms)
+Completed 200 OK in 44610ms (Views: 2.5ms | ActiveRecord: 47.5ms | Allocations: 43410)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mJob Load (1.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 11]]
+Started POST "/login" for ::1 at 2020-08-31 21:22:20 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 287ms (Views: 2.0ms | ActiveRecord: 8.7ms | Allocations: 8343)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:22:36 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98699", "company"=>"Mphasis-Stelligent", "date"=>"2020-08-31T11:52:23-07:00", "position"=>"AWS Cloud Consultant", "description"=>"7+ years of technical experience in AWS Cloud development, operations, or joint DevOps responsibilities.AWS hands on coding and some travel to customers for consulting to solve complex business problems.&nbsp;- Need to have multiple successful customer engagements providing conti...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mUsersJob Create (1.1ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 2], ["created_at", "2020-09-01 01:22:57.049872"], ["updated_at", "2020-09-01 01:22:57.049872"]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:21:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (13.55ms)
+Completed 200 OK in 20717ms (Views: 30.4ms | ActiveRecord: 21.3ms | Allocations: 42260)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:23:53 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 278ms (Views: 2.7ms | ActiveRecord: 7.6ms | Allocations: 8347)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:24:02 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98699", "company"=>"Mphasis-Stelligent", "date"=>"2020-08-31T11:52:23-07:00", "position"=>"AWS Cloud Consultant", "description"=>"7+ years of technical experience in AWS Cloud development, operations, or joint DevOps responsibilities.AWS hands on coding and some travel to customers for consulting to solve complex business problems.&nbsp;- Need to have multiple successful customer engagements providing conti...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98699"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:18:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[36mUsersJob Create (0.8ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 2], ["created_at", "2020-09-01 01:24:20.365934"], ["updated_at", "2020-09-01 01:24:20.365934"]]
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:22:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (14.8ms)
+Completed 200 OK in 40923ms (Views: 34.2ms | ActiveRecord: 26.0ms | Allocations: 55190)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" INNER JOIN "users_jobs" ON "jobs"."id" = "users_jobs"."job_id" WHERE "users_jobs"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 11]]
+Started POST "/login" for ::1 at 2020-08-31 21:30:48 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 276ms (Views: 1.9ms | ActiveRecord: 8.4ms | Allocations: 8342)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:31:13 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98696", "company"=>"Bitovi", "date"=>"2020-08-31T10:45:35-07:00", "position"=>"Angular Developer Consultant", "description"=>"ABOUT BITOVI:Bitovi helps companies create better web applications.&nbsp;&nbsp;We have a track record of designing and building high-profile and amazing web applications through our active Consulting practice.&nbsp; Our apps are built with tests, full docs and a deployment proces...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98696"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98696"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (1.5ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 3], ["created_at", "2020-09-01 01:31:13.383757"], ["updated_at", "2020-09-01 01:31:13.383757"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 3]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (11.6ms)
+Completed 200 OK in 104ms (Views: 25.8ms | ActiveRecord: 35.3ms | Allocations: 28178)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:43:08 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 252ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 1237)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:43:24 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98690", "company"=>"Postscript", "date"=>"2020-08-31T08:08:20-07:00", "position"=>"Business Intelligence Engineer", "description"=>"Postscript is redefining marketing for ecommerce companies. By introducing SMS as an entirely new channel for ecommerce stores to engage, retain, and convert their customer base, brands are seeing huge ROI with Postscript. Backed by Y Combinator and other top investors, Postscrip...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98690"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (1.0ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98690"], ["company", "Postscript"], ["date", "2020-08-31T08:08:20-07:00"], ["position", "Business Intelligence Engineer"], ["description", "Postscript is redefining marketing for ecommerce companies. By introducing SMS as an entirely new channel for ecommerce stores to engage, retain, and convert their customer base, brands are seeing huge ROI with Postscript. Backed by Y Combinator and other top investors, Postscrip..."], ["created_at", "2020-09-01 01:43:24.118939"], ["updated_at", "2020-09-01 01:43:24.118939"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (1.5ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 5], ["created_at", "2020-09-01 01:43:24.131343"], ["updated_at", "2020-09-01 01:43:24.131343"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 5]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (3.8ms)
+Completed 200 OK in 26ms (Views: 3.3ms | ActiveRecord: 7.1ms | Allocations: 10711)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:45:24 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 252ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:45:45 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98662", "company"=>"Curative", "date"=>"2020-08-30T07:36:34-07:00", "position"=>"Senior Backend Software Engineer", "description"=>"SkillsStack: Python (Flask), AWS, PostgresAbility to expand on the vision and build reliable systems quicklyExpert documentationAssimilate industry nuancesProjectsData integrations between our systems and public health departments via a REST API to report resultsStanding up our o...", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98662"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (2.1ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98662"], ["company", "Curative"], ["date", "2020-08-30T07:36:34-07:00"], ["position", "Senior Backend Software Engineer"], ["description", "SkillsStack: Python (Flask), AWS, PostgresAbility to expand on the vision and build reliable systems quicklyExpert documentationAssimilate industry nuancesProjectsData integrations between our systems and public health departments via a REST API to report resultsStanding up our o..."], ["created_at", "2020-09-01 01:45:45.425522"], ["updated_at", "2020-09-01 01:45:45.425522"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (0.7ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 6], ["created_at", "2020-09-01 01:45:45.435730"], ["updated_at", "2020-09-01 01:45:45.435730"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 6]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (3.14ms)
+Completed 200 OK in 20ms (Views: 3.0ms | ActiveRecord: 5.7ms | Allocations: 10593)
+
+
+Started POST "/login" for ::1 at 2020-08-31 21:52:40 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 261ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1223)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 21:52:53 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98671", "company"=>"Scrapinghub", "date"=>"2020-08-31T02:32:43-07:00", "position"=>"Solutions Architect", "description"=>"About the Job:&nbsp;Scrapinghub is looking for a motivated Solutions Architect to further accelerate the rapid growth Scrapinghub has seen in recent years.As a Solutions Architect, you will collect project requirements and provide technical solutions to our customers and internal...", "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98671"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (1.6ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98671"], ["company", "Scrapinghub"], ["date", "2020-08-31T02:32:43-07:00"], ["position", "Solutions Architect"], ["description", "About the Job:&nbsp;Scrapinghub is looking for a motivated Solutions Architect to further accelerate the rapid growth Scrapinghub has seen in recent years.As a Solutions Architect, you will collect project requirements and provide technical solutions to our customers and internal..."], ["created_at", "2020-09-01 01:52:53.795972"], ["updated_at", "2020-09-01 01:52:53.795972"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (0.7ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 7], ["created_at", "2020-09-01 01:52:53.806167"], ["updated_at", "2020-09-01 01:52:53.806167"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 7]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (3.55ms)
+Completed 200 OK in 20ms (Views: 3.2ms | ActiveRecord: 5.9ms | Allocations: 10621)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:00:00 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 257ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 1223)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:09:53 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 254ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1222)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:13:12 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 253ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1137)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:15:01 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.33ms)
+Completed 200 OK in 264ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 1137)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 22:15:13 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98671", "company"=>"Scrapinghub", "date"=>"2020-08-31T02:32:43-07:00", "position"=>"Solutions Architect", "description"=>"About the Job:&nbsp;Scrapinghub is looking for a motivated Solutions Architect to further accelerate the rapid growth Scrapinghub has seen in recent years.As a Solutions Architect, you will collect project requirements and provide technical solutions to our customers and internal...", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98671"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98671"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (0.8ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 7], ["created_at", "2020-09-01 02:15:13.073539"], ["updated_at", "2020-09-01 02:15:13.073539"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 7]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (4.05ms)
+Completed 200 OK in 26ms (Views: 3.7ms | ActiveRecord: 7.9ms | Allocations: 10816)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:18:40 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"aiden@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aiden@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 404 Not Found in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 761)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:18:58 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 404 Not Found in 252ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 799)
+
+
+Started POST "/login" for ::1 at 2020-08-31 22:19:11 -0400
+Processing by SessionsController#login as JSON
+  Parameters: {"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"collin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "collin@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 259ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1138)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 22:19:25 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98702", "company"=>"Ultimate Software", "date"=>"2020-08-31T12:50:05-07:00", "position"=>"Principal Cloud Architect", "description"=>"Principal Cloud Architect at Ultimate Software are hybrid Network/System Architects that have a breadth of knowledge encompassing all aspects of cloud computing and service delivery. They develop cloud solutions to enhance, harden and support our service delivery processes. They ...", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98702"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.8ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98702"], ["company", "Ultimate Software"], ["date", "2020-08-31T12:50:05-07:00"], ["position", "Principal Cloud Architect"], ["description", "Principal Cloud Architect at Ultimate Software are hybrid Network/System Architects that have a breadth of knowledge encompassing all aspects of cloud computing and service delivery. They develop cloud solutions to enhance, harden and support our service delivery processes. They ..."], ["created_at", "2020-09-01 02:19:25.324430"], ["updated_at", "2020-09-01 02:19:25.324430"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (0.5ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 8], ["created_at", "2020-09-01 02:19:25.333499"], ["updated_at", "2020-09-01 02:19:25.333499"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 8]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (3.18ms)
+Completed 200 OK in 18ms (Views: 3.1ms | ActiveRecord: 4.0ms | Allocations: 10589)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 22:25:12 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98689", "company"=>"PestRoutes", "date"=>"2020-08-31T07:22:25-07:00", "position"=>"Mobile Software Engineer", "description"=>"About&nbsp;Field Service Holdings LLCWe are a remarkable company in remarkable times. Our business includes PestRoutes software and Lobster Marketing, together comprising Field Service Holdings. PestRoutes&reg; is a SaaS platform providing end-to-end office management software fo...", "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98689"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (0.6ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98689"], ["company", "PestRoutes"], ["date", "2020-08-31T07:22:25-07:00"], ["position", "Mobile Software Engineer"], ["description", "About&nbsp;Field Service Holdings LLCWe are a remarkable company in remarkable times. Our business includes PestRoutes software and Lobster Marketing, together comprising Field Service Holdings. PestRoutes&reg; is a SaaS platform providing end-to-end office management software fo..."], ["created_at", "2020-09-01 02:25:12.700960"], ["updated_at", "2020-09-01 02:25:12.700960"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[36mUsersJob Create (1.2ms)[0m  [1m[32mINSERT INTO "users_jobs" ("user_id", "job_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["job_id", 9], ["created_at", "2020-09-01 02:25:12.710463"], ["updated_at", "2020-09-01 02:25:12.710463"]]
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:19:in `create'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 9]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:20:in `create'
+[active_model_serializers] Rendered JobSerializer with ActiveModelSerializers::Adapter::Attributes (2.71ms)
+Completed 200 OK in 20ms (Views: 2.4ms | ActiveRecord: 5.8ms | Allocations: 10705)
+
+
+Started GET "/jobs" for ::1 at 2020-08-31 22:25:31 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 1]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 2]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 3]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 4]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 5]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 6]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 7]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 8]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "users_jobs" ON "users"."id" = "users_jobs"."user_id" WHERE "users_jobs"."job_id" = $1[0m  [["job_id", 9]]
+[active_model_serializers]   ↳ app/controllers/jobs_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.78ms)
+Completed 200 OK in 31ms (Views: 25.4ms | ActiveRecord: 5.1ms | Allocations: 18056)
+
+
+Started POST "/jobs" for ::1 at 2020-08-31 22:31:34 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98702", "company"=>"Ultimate Software", "date"=>"2020-08-31T12:50:05-07:00", "position"=>"Principal Cloud Architect", "description"=>"Principal Cloud Architect at Ultimate Software are hybrid Network/System Architects that have a breadth of knowledge encompassing all aspects of cloud computing and service delivery. They develop cloud solutions to enhance, harden and support our service delivery processes. They ..."}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98702"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98702"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:15:in `create'
+Completed 404 Not Found in 8ms (ActiveRecord: 1.9ms | Allocations: 3808)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/jobs_controller.rb:17:in `create'
+Started POST "/jobs" for ::1 at 2020-08-31 22:32:07 -0400
+Processing by JobsController#create as JSON
+  Parameters: {"job"=>{"url"=>"https://remoteok.io/remote-jobs/98703", "company"=>"MobyMax", "date"=>"2020-08-31T12:18:35-07:00", "position"=>"QA Engineer", "description"=>"About UsMobyMax is an educational technology company that creates unique, individualized education plans for students in all K-8 subjects. Used in over 73% of all K-8 schools in the United States with over 22 million students registered, MobyMax allows students to make tremendous..."}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "jobs" WHERE "jobs"."url" = $1 LIMIT $2[0m  [["url", "https://remoteok.io/remote-jobs/98703"], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[36mJob Create (6.1ms)[0m  [1m[32mINSERT INTO "jobs" ("url", "company", "date", "position", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["url", "https://remoteok.io/remote-jobs/98703"], ["company", "MobyMax"], ["date", "2020-08-31T12:18:35-07:00"], ["position", "QA Engineer"], ["description", "About UsMobyMax is an educational technology company that creates unique, individualized education plans for students in all K-8 subjects. Used in over 73% of all K-8 schools in the United States with over 22 million students registered, MobyMax allows students to make tremendous..."], ["created_at", "2020-09-01 02:32:07.364658"], ["updated_at", "2020-09-01 02:32:07.364658"]]
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/jobs_controller.rb:14:in `create'
+Completed 404 Not Found in 24ms (ActiveRecord: 19.4ms | Allocations: 3632)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/jobs_controller.rb:17:in `create'

@@ -10,8 +10,14 @@ class JobsController < ApplicationController
     end
 
     def create
-        job = Job.new(job_params)
-        render json: job.save ? job : {errors: 'something went wrong.Try again'}
+        job = Job.new(url: params[:job][:url], company:params[:job][:company], date:params[:job][:date], position:params[:job][:position], description:params[:job][:description])
+        if !job.save
+            job = Job.find_by(url: params[:job][:url])
+        end
+        user = User.find(params[:job][:user_id])
+        user_job = UsersJob.new(user_id: user.id, job_id: job.id)
+        user_job.save
+        render json: user_job.save ? job : {errors: 'something went wrong.Try again'}
     end
 
     def destroy
@@ -23,6 +29,6 @@ class JobsController < ApplicationController
     private
 
     def job_params
-        params.require(:job).permit(:url, :title, :company_name, :job_type, :candidate_required_location, :salary, :description)
+        params.require(:job).permit(:url, :company, :date, :position, :description, :user_id)
     end
 end
