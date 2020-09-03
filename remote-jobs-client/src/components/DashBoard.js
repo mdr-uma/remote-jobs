@@ -17,7 +17,7 @@ const DashBoard = (props) => {
                 <Button variant="outline-primary" onClick={()=>props.logOut()}>Log Out</Button>
             </div>
             <div className="saved-job">
-                <JobList jobs={props.savedJobs}/>
+                {props.savedJobs ? <JobList jobs={props.savedJobs} /> : null}  
             </div>
         </div>  
     )
