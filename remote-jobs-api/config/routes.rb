@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
     post '/login' => "sessions#login"
-    delete '/logout', to: 'sessions#destroy'
+    delete '/logout' => "sessions#destroy"
     get '/currentUser' => "sessions#currentUser"
 
 resources :users, only: [:create, :index, :show]
