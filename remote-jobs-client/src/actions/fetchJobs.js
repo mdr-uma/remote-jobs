@@ -34,7 +34,7 @@ export const savedJobs = (job, user, callback) => {
     })
     .then(res=>res.json())
     .then(data => {
-        dispatch({ type: "SAVED_JOB", job: data })
+        dispatch({ type: "SAVED_JOB", job: data, save:true})
         callback()
         })
     }
