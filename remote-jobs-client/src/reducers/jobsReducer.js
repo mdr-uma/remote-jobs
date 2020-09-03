@@ -10,11 +10,6 @@ const JobsReducer = (state= [], action) => {
             return (
                 action.jobs
             )
-            
-        case 'SAVED_JOB':
-            return(
-                [...state, action.job]
-            )
 
         default:
             return state
