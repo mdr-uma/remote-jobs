@@ -12,17 +12,17 @@ class UsersController < ApplicationController
         end
     end
 
-    # def show
-    #     @user = User.find_by(id: params[:id])
-    #     if @user
-    #         render json: @user 
-    #     else
-    #         render json: {
-    #             status: 500,
-    #             errors: ['no users found']
-    #         }
-    #     end
-    # end
+    def show
+        @user = User.find(params[:id])
+        if @user
+            render json: @user 
+        else
+            render json: {
+                status: 500,
+                errors: ['no users found']
+            }
+        end
+    end
 
     def create
         @user = User.create(user_params)
