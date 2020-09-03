@@ -2,7 +2,7 @@ const savedJobsReducer = (state = [], action) => {
     switch (action.type) {
         case 'SAVED_JOB':
             return (
-                [...state, action.job]
+                [...state, {job:action.job, save: action.save}]
             )
 
         default:
