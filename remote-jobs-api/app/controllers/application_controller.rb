@@ -2,7 +2,11 @@ class ApplicationController < ActionController::API
     include ::ActionController::Cookies
 
     def current_user
+        begin
         @current_user ||= User.find_by(id: authenticate_user)
+        rescue
+            return nil
+        end
     end
 
     def logged_in?
