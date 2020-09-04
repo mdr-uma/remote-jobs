@@ -1,4 +1,4 @@
-export const logoutUser = () => {
+export const logoutUser = (callback) => {
     return dispatch => {
      return fetch(`http://localhost:3000/logout`, {
         method: "DELETE",
@@ -7,8 +7,10 @@ export const logoutUser = () => {
             "Content-Type": "application/json",
             }
         })
-        .then(data =>
-        dispatch({type: "LOGOUT_USER"})
+         .then(data => {
+             dispatch({ type: "LOGOUT_USER" })
+             callback()
+         }
         )
     }
 }
