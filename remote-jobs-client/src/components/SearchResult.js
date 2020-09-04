@@ -11,16 +11,17 @@ class SearchResult extends Component {
                     <BodyImage />
                 </div>
                 <div className="search-container">
-                    <JobList jobs={this.props.jobs} />
+                    <JobList jobs={this.props.jobs} user={this.props.user}/>
                 </div>
             </div>
         )
     }
 }
 
-const mapStateToProps = ({ jobs }) => {
+const mapStateToProps = ({ jobs, user }) => {
     return {
-        jobs: jobs.slice(1)
+        jobs: jobs.slice(1),
+        user
     }
 }
 
