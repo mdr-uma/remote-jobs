@@ -19,7 +19,7 @@ class JobsContainer extends Component {
                         <BodyImage />
                         <SignUpForm />
                         <JobSearch />
-                        <JobList jobs={this.props.jobs}/>
+                        <JobList jobs={this.props.jobs} user={this.props.user}/>
                     </div>
                 </main>
             </div>
@@ -27,9 +27,10 @@ class JobsContainer extends Component {
     }
 }
 
-const mapStateToProps = ({ jobs }) => {
+const mapStateToProps = ({ jobs, user }) => {
     return{
-        jobs : jobs.slice(1)
+        jobs: jobs.slice(1),
+        user: user
     }
 }
 
