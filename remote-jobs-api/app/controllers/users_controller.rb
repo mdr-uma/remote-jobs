@@ -33,7 +33,6 @@ class UsersController < ApplicationController
         else
             render json: {error: "Somthing went wrong, Please try again later."}
         end
-        # render json: user.save ? user : {error: 'something went wrong'}
     end
 
     private
