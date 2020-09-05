@@ -17032,3 +17032,18 @@ Processing by SessionsController#currentUser as */*
 Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.6ms | Allocations: 4324)
 
 
+Started GET "/currentUser" for ::1 at 2020-09-04 22:28:47 -0400
+Processing by SessionsController#currentUser as */*
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 13.5ms | Allocations: 7351)
+
+
+  
+ArgumentError (Unknown validator: 'ScopeValidator'):
+  
+app/models/users_job.rb:4:in `<class:UsersJob>'
+app/models/users_job.rb:1:in `<main>'
+app/controllers/application_controller.rb:17:in `serializer_user'
+app/controllers/sessions_controller.rb:22:in `currentUser'

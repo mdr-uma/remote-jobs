@@ -9,24 +9,28 @@ export const loginUser = (payload, callback) => async(dispatch) => {
             body: JSON.stringify({ user: payload })
         })
         .then(res => res.json())
+        if (response.error) {
+            alert(response.error)
+        }
         dispatch({type: 'LOGIN_USER', payload: response})
         callback()
 }
 
 export const getUser = () => { 
-     return dispatch => {   
-          return fetch("http://localhost:3000/currentUser", {  
+    return dispatch => {   
+        return fetch("http://localhost:3000/currentUser", {  
             credentials: "include",         
             headers: {            
                 "Content-Type": "application/json"          
-                }})        
-                .then(res => res.json())        
-                .then(resp => {          
-                    if (resp.error) {            
-                        alert(resp.error)          
-                    } else {            
-                        dispatch({type: "CURRENT_USER", user: resp})          
-                        }})        
-                        // .catch(console.log)  
-                    }
                 }
+            })        
+            .then(res => res.json())        
+            .then(resp => {          
+                if (resp.error) {            
+                    alert(resp.error)          
+                } else {            
+                     dispatch({type: "CURRENT_USER", user: resp})          
+                }
+            })        
+    }
+}

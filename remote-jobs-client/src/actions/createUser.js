@@ -8,7 +8,10 @@ export const createUser = (payload, callback) => async(dispatch) => {
             credentials: "include",
             body: JSON.stringify({ user: payload })
         })
-            .then(response => response.json())
-           dispatch({ type: 'CREATE_USER', payload: response })
+        .then(response => response.json())
+        if (response.error) {
+            alert(response.error)
+        }
+        dispatch({ type: 'CREATE_USER', payload: response })
         callback()  
 }
