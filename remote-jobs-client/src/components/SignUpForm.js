@@ -2,7 +2,6 @@ import React from 'react'
 import {createUser} from '../actions/createUser'
 import {connect} from 'react-redux'
 import { withRouter } from 'react-router-dom';
-// import image from '../images/image-1.jpeg'
 
 class SignUpForm extends React.Component{
     state = {
@@ -44,8 +43,6 @@ class SignUpForm extends React.Component{
                             <input type="password" placeholder="password" value={this.state.password} name="password" onChange={this.handleChange}/> <br/><br/>
                             <input type="submit"/>
                         </form>
-                        {/* <img src={image}/> */}
-
                     </div>
                 </div>
             </div>
