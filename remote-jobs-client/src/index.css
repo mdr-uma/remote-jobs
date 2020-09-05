@@ -115,7 +115,7 @@ h1{
     text-align: center;
 }
 
-p{
+.job-list p{
     text-align: center;
 }
 
@@ -267,6 +267,21 @@ h6{
 .saved-job{
     position: absolute;
     top: 150px;
+}
+
+.about-page{
+    margin: auto;
+    width: 68%;
+}
+
+.left-img{
+    float: left;
+    margin: 10px;
+}
+
+.right-img{
+    float: right;
+    margin: 10px;
 }
 
 footer{
