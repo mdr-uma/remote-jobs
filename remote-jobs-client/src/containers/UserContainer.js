@@ -16,6 +16,7 @@ class UserContainer extends React.Component{
                 userName={this.props.user.username} 
                 logOut={this.props.logoutUser} 
                 savedJobs={this.props.user.savedJobs}
+                user={this.props.user}
                 />
             </div>
         )
