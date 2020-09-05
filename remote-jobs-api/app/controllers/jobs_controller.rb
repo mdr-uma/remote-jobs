@@ -16,7 +16,7 @@ class JobsController < ApplicationController
         end
         user = User.find(params[:job][:user_id])
         user_job = UsersJob.new(user_id: user.id, job_id: job.id)
-        render json: user_job.save ? job : {errors: 'Job is already been saved'}
+        render json: user_job.save ? job : {errors: 'Job has been already saved'}
     end
 
     # def destroy
