@@ -9,8 +9,10 @@ const DashBoard = (props) => {
     return(
         <div className="content">
             <div className="job-list">
-                <h1> Welcome to your DashBoard.</h1>
-                <p>You can see all your saved jobs here. Good Luck on Job hunt!</p>
+                <br/>
+                <h3> Welcome to your DashBoard. </h3>
+                <p> You can see all your saved jobs here. Good Luck on Job hunt!</p>
+                <hr/>
             </div>
             <div className="side-bar">
                 Hi, {props.user.username}!
