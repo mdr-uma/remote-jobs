@@ -1,10 +1,11 @@
 import React from 'react'
 import {Button} from 'react-bootstrap'
 import JobList from './JobList'
-
+import { useHistory } from "react-router-dom";
 
 
 const DashBoard = (props) => {
+    const history = useHistory()
     return(
         <div className="content">
             <div className="job-list">
@@ -12,12 +13,13 @@ const DashBoard = (props) => {
                 <p>You can see all your saved jobs here. Good Luck on Job hunt!</p>
             </div>
             <div className="side-bar">
-                Hi, {props.userName}!
+                Hi, {props.user.username}!
                 <br/>
-                <Button variant="outline-primary" onClick={()=>props.logOut()}>Log Out</Button>
+                <Button variant="outline-primary" onClick={() => props.logOut(() => {
+                    history.push('/')})}>Log Out</Button>
             </div>
             <div className="saved-job">
-                {props.savedJobs ? <JobList jobs={props.savedJobs} /> : null}  
+                {props.savedJobs ? <JobList jobs={props.savedJobs} user={props.user}/> : null}  
             </div>
         </div>  
     )
