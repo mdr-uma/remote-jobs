@@ -19,7 +19,9 @@ class SignUpForm extends React.Component{
     handleSubmit = e => {
         e.preventDefault()
         this.props.createUser(this.state, () => {
+            if(this.props.user.username) {
             this.props.history.push('/dashboard')
+            }
         })
         this.setState({
             username: "",
@@ -36,11 +38,11 @@ class SignUpForm extends React.Component{
                         <h3>Sign Up</h3>
                         <form onSubmit={this.handleSubmit}>
                             <label>Username: </label>
-                            <input type="text" placeholder="username" value={this.state.username} name="username" onChange={this.handleChange}/> <br/><br/>
+                            <input type="text" placeholder="username" value={this.state.username} name="username" required onChange={this.handleChange}/> <br/><br/>
                             <label>Email Address: </label>
-                            <input type="text" placeholder="eg@gmail.com" value={this.state.email} name="email" onChange={this.handleChange}/> <br/><br/>
+                            <input type="email" placeholder="eg@gmail.com" value={this.state.email} name="email" required onChange={this.handleChange}/> <br/><br/>
                             <label>Password: </label>
-                            <input type="password" placeholder="password" value={this.state.password} name="password" onChange={this.handleChange}/> <br/><br/>
+                            <input type="password" placeholder="password" value={this.state.password} name="password"required  onChange={this.handleChange}/> <br/><br/>
                             <input type="submit"/>
                         </form>
                     </div>
@@ -50,4 +52,10 @@ class SignUpForm extends React.Component{
     }
 }
 
-export default connect(null, {createUser})(withRouter(SignUpForm))
+const mapStateToProps = ({ user }) => {
+    return {
+        user
+    }
+}
+
+export default connect(mapStateToProps, {createUser})(withRouter(SignUpForm))

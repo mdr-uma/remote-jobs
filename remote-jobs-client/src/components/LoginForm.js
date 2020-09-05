@@ -2,7 +2,6 @@ import React from 'react'
 import { loginUser } from '../actions/loginUser'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom';
-// import image from '../images/image-1.jpeg'
 
 class LoginForm extends React.Component {
     state = {
@@ -19,7 +18,9 @@ class LoginForm extends React.Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.loginUser(this.state, () => {
-            this.props.history.push('/dashboard')
+            if(this.props.user.username) {
+                this.props.history.push('/dashboard')
+            }
         })
         this.setState({
             email: "",
@@ -34,9 +35,9 @@ class LoginForm extends React.Component {
                         <h3>Login</h3>
                         <form onSubmit={this.handleSubmit}>
                             <label>Email Address: </label>
-                            <input type="text" placeholder="eg@gmail.com" value={this.state.email} name="email" onChange={this.handleChange} /> <br /><br />
+                            <input type="email" placeholder="eg@gmail.com" value={this.state.email} name="email" required onChange={this.handleChange} /> <br /><br />
                             <label>Password: </label>
-                            <input type="password" placeholder="password" value={this.state.password} name="password" onChange={this.handleChange} /> <br /><br />
+                            <input type="password" placeholder="password" value={this.state.password} name="password" required onChange={this.handleChange} /> <br /><br />
                             <input type="submit" value="login"/>
                         </form>
                 </div>
@@ -45,6 +46,11 @@ class LoginForm extends React.Component {
     }
 }
 
+const mapStateToProps = ({user}) => {
+    return {
+        user
+    }
+}
 
 
-export default connect(null, { loginUser })(withRouter(LoginForm))
+export default connect(mapStateToProps, { loginUser })(withRouter(LoginForm))
