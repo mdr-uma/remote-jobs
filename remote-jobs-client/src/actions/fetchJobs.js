@@ -34,6 +34,9 @@ export const savedJobs = (job, user, callback) => {
     })
     .then(res=>res.json())
     .then(data => {
+        if(data.errors) {
+            alert(data.errors) 
+        }
         dispatch({ type: "SAVED_JOB", job: data, save:true})
         callback()
         })
