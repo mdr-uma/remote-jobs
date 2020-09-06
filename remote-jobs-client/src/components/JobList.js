@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import dateFormat from 'dateformat'
+import RemoveButton from './RemoveButton'
 
 const renderJobs = (props) => {
     return props.jobs.map((job, index) => {
@@ -12,8 +13,7 @@ const renderJobs = (props) => {
                     <h4>{job.position}</h4>
                     <a alt="job link" href={job.url}>{job.url}</a>
                     <h6>{job.description}</h6>
-                    {/* {props.user && props.user.savedJobs.includes(job) ? null : <Button className="button" job={job} /> } */}
-                    {job.slug ? <Button className="button" job={job} /> : null}
+                    {job.slug ? <Button job={job} /> : <RemoveButton job={job}/>}
                 </div>
             )
     })
