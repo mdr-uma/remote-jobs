@@ -17,6 +17,11 @@ export default function usersReducer(state = {}, action){
             return (
                 action.user
                 )
+
+        case 'REMOVE_JOB':
+            return (
+                { ...state, savedJobs: state.savedJobs.filter(job => job.id !== action.id) }
+            )
     
         default:
             return state
