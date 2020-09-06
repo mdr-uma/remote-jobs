@@ -256,6 +256,19 @@ h6{
     color: rgb(10, 143, 5);
 }
 
+.fas.fa-trash-alt{
+    position: relative;
+    left: 50rem;
+    color: navy;
+    margin-bottom: 1rem;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.fas.fa-trash-alt:hover{
+    color: red;
+}
+
 .side-bar{
     background-color: rgb(182, 194, 248);
     width: 11%;
