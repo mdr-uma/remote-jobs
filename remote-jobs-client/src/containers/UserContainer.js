@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import DashBoard from '../components/DashBoard'
 import {logoutUser} from '../actions/logoutUser'
 import {getUser} from '../actions/loginUser'
+import {removeJob} from '../actions/fetchJobs'
 
 class UserContainer extends React.Component{
     componentDidMount() {
@@ -16,6 +17,7 @@ class UserContainer extends React.Component{
                 userName={this.props.user.username} 
                 logOut={this.props.logoutUser} 
                 savedJobs={this.props.user.savedJobs}
+                removeJob={this.props.removeJob}
                 user={this.props.user}
                 />
             </div>
@@ -30,4 +32,4 @@ const mapStateToProps = ({ user, savedJobs }) => {
     }
 }
 
-export default connect(mapStateToProps, {logoutUser, getUser})(UserContainer)
+export default connect(mapStateToProps, {logoutUser, getUser, removeJob})(UserContainer)
