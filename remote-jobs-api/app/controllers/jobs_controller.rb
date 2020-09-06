@@ -19,11 +19,10 @@ class JobsController < ApplicationController
         render json: user_job.save ? job : {errors: 'Job has been already saved'}
     end
 
-    # def destroy
-    #     job = Job.find_by(id: params[:id])
-    #     job.delete(job_params)
-    #     render json: job
-    # end
+    def destroy
+        job = Job.find_by(id: params[:id])
+        job.destroy
+    end
 
     private
 
