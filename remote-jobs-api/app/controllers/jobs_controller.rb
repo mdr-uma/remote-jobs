@@ -1,7 +1,11 @@
 class JobsController < ApplicationController
     def index
-        jobs = Job.all
-        render json: jobs
+        if logged_in?
+            jobs = current_user.jobs
+            render json: jobs
+        else
+            render json: {error: "user not logged in"}
+        end
     end
 
     def show
