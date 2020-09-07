@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
         if @user && @user.authenticate(params[:user][:password])
             created_jwt = issue_token({id: @user.id})
             cookies.signed[:jwt] = {value: created_jwt, httponly: true, expires: 1.hour.from_now}
-            # render json: {username: @user.username, id: @user.id, token: cookies.signed[:jwt]}
             render json: @user
         else
             render json: {
