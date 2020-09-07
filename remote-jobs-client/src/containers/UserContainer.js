@@ -2,12 +2,11 @@ import React from 'react'
 import {connect} from 'react-redux'
 import DashBoard from '../components/DashBoard'
 import {logoutUser} from '../actions/logoutUser'
-import {getUser} from '../actions/loginUser'
-import {removeJob} from '../actions/fetchJobs'
+import { userJob, removeJob } from '../actions/userJobs'
 
 class UserContainer extends React.Component{
     componentDidMount() {
-        this.props.getUser()
+        this.props.userJob()
     }
 
     render() {
@@ -16,7 +15,7 @@ class UserContainer extends React.Component{
                 <DashBoard 
                 userName={this.props.user.username} 
                 logOut={this.props.logoutUser} 
-                savedJobs={this.props.user.savedJobs}
+                saveJob={this.props.saveJob}
                 removeJob={this.props.removeJob}
                 user={this.props.user}
                 />
@@ -25,11 +24,11 @@ class UserContainer extends React.Component{
     }
 }
 
-const mapStateToProps = ({ user, savedJobs }) => {
+const mapStateToProps = ({ user, saveJob }) => {
     return {
         user,
-        savedJobs
+        saveJob
     }
 }
 
-export default connect(mapStateToProps, {logoutUser, getUser, removeJob})(UserContainer)
+export default connect(mapStateToProps, {logoutUser, userJob, removeJob})(UserContainer)
