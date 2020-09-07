@@ -37,23 +37,9 @@ export const savedJobs = (job, user, callback) => {
         if(data.errors) {
             alert(data.errors) 
         }
-        dispatch({ type: "SAVED_JOB", job: data, save:true})
+        dispatch({ type: "SAVED_JOB", job: data})
         callback()
         })
     }
 }
 
-export const removeJob = (id) => {
-    return dispatch => {
-        return fetch(`http://localhost:3000/jobs/${id}`, {
-            method: "DELETE",
-            credentials: "include",
-            headers: {
-                "Content-type": "application/json",
-            }
-        })
-        .then(job => {
-        dispatch({type: "REMOVE_JOB", id})
-        })
-    }
-}
