@@ -1,8 +1,13 @@
 const savedJobsReducer = (state = [], action) => {
     switch (action.type) {
-        case 'SAVED_JOB':
+        case 'USER_JOB':
             return (
-                [...state, {job:action.job, save: action.save}]
+                action.job
+            )
+
+        case 'REMOVE_JOB':
+            return (
+                state.filter(job => job.id !== action.id)
             )
         
         default:
