@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import {connect} from "react-redux"
 
 const renderButton = (props, routeChange) => {
+    console.log('propsssss', props);
     if(props.user.username) {
         return(
             <div>
