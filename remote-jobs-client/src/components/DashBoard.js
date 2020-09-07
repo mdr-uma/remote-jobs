@@ -21,7 +21,7 @@ const DashBoard = (props) => {
                     history.push('/')})}>Log Out</Button>
             </div>
             <div className="saved-job">
-                {props.savedJobs ? <JobList jobs={props.savedJobs} user={props.user}/> : null}  
+                {props.saveJob ? <JobList jobs={props.saveJob} user={props.user} removeJob={props.removeJob}/> : null}  
             </div>
         </div>  
     )
