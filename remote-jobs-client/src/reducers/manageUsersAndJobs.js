@@ -6,7 +6,7 @@ import savedJobsReducer from './savedJobsReducer'
 const rootReducer = combineReducers({
     user: userReducer,
     jobs: jobsReducer,
-    savedJobs: savedJobsReducer
+    saveJob: savedJobsReducer
 })
 
 export default rootReducer
