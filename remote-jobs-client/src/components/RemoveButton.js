@@ -1,5 +1,4 @@
 import React from 'react'
-import { removeJob } from '../actions/fetchJobs'
 import { connect } from "react-redux"
 
 const renderButton = (props) => {
@@ -27,4 +26,4 @@ const mapStateToProps = ({ user }) => {
     }
 }
 
-export default connect(mapStateToProps, {removeJob})(RemoveButton)
+export default connect(mapStateToProps)(RemoveButton)
