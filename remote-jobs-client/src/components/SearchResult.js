@@ -6,11 +6,11 @@ import { connect } from 'react-redux'
 class SearchResult extends Component {  
     render() {
         return (
-            <div>
+            <div className="search-container">
                 <div className="search-image">
                     <BodyImage />
                 </div>
-                <div className="search-container">
+                <div className="search-result">
                     <JobList jobs={this.props.jobs} user={this.props.user}/>
                 </div>
             </div>
