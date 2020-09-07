@@ -3,8 +3,9 @@ import SignUpForm from '../components/SignUpForm'
 import BodyImage from '../components/BodyImage'
 import JobList from '../components/JobList'
 import JobSearch from '../components/JobSearch'
-import {fetchJobs} from '../actions/fetchJobs'
+import {fetchJobs, savedJobs} from '../actions/fetchJobs'
 import {connect} from 'react-redux'
+
 
 class JobsContainer extends Component {
     componentDidMount() {
@@ -19,7 +20,11 @@ class JobsContainer extends Component {
                         <BodyImage />
                         <SignUpForm />
                         <JobSearch />
-                        <JobList jobs={this.props.jobs} user={this.props.user}/>
+                        <JobList 
+                        jobs={this.props.jobs} 
+                        user={this.props.user} 
+                        savedJobs={this.props.savedJobs}
+                        />
                     </div>
                 </main>
             </div>
@@ -34,4 +39,4 @@ const mapStateToProps = ({ jobs, user }) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchJobs})(JobsContainer)
+export default connect(mapStateToProps, { fetchJobs, savedJobs})(JobsContainer)
