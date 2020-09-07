@@ -19,7 +19,7 @@ class SignUpForm extends React.Component{
     handleSubmit = e => {
         e.preventDefault()
         this.props.createUser(this.state, () => {
-            if(this.props.user.username) {
+            if(!this.props.user.error) {
             this.props.history.push('/dashboard')
             }
         })
