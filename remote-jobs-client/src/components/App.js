@@ -9,6 +9,7 @@ import UserContainer from '../containers/UserContainer'
 import SearchResult from './SearchResult'
 import {connect} from 'react-redux'
 import { getUser } from '../actions/loginUser'
+import {Redirect} from 'react-router-dom'
 
 
 
@@ -26,7 +27,7 @@ class App extends Component{
                     <Route exact path='/' component={JobsContainer} /> 
                     <Route exact path='/about' component={About} /> 
                     <Route exact path='/login' component={LoginForm} />
-                    <Route exact path='/dashboard' component={UserContainer} />
+                    {this.props.user.username ? <Route exact path='/dashboard' component={UserContainer} /> : <Redirect to="/login"/>}
                     <Route exact path='/results' component={SearchResult} />
                 </BrowserRouter>
                 <Footer /> 
