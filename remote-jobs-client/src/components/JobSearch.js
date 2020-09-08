@@ -34,7 +34,6 @@ class JobSearch extends Component {
                         value={this.state.search}
                         onChange={this.handleOnChange}
                     />
-                    <input type='submit' value='Find Jobs'/>
                 </form>
             </div>
         )
