@@ -4,7 +4,6 @@ import dateFormat from 'dateformat'
 import RemoveButton from './RemoveButton'
 
 const renderJobs = (props) => {
-    console.log('renderrrrr', props);
     return props.jobs.map((job, index) => {
             let date = job.date
             return (

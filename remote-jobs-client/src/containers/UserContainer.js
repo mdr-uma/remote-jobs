@@ -13,7 +13,6 @@ class UserContainer extends React.Component{
         return(
             <div>
                 <DashBoard 
-                userName={this.props.user.username} 
                 logOut={this.props.logoutUser} 
                 saveJob={this.props.saveJob}
                 removeJob={this.props.removeJob}
