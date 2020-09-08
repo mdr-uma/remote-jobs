@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BodyImage from './BodyImage'
 import JobList from './JobList'
 import { connect } from 'react-redux'
+import {savedJobs} from '../actions/fetchJobs'
 
 class SearchResult extends Component {  
     render() {
@@ -11,7 +12,7 @@ class SearchResult extends Component {
                     <BodyImage />
                 </div>
                 <div className="search-result">
-                    <JobList jobs={this.props.jobs} user={this.props.user}/>
+                    <JobList jobs={this.props.jobs} user={this.props.user} savedJobs={this.props.savedJobs}/>
                 </div>
             </div>
         )
@@ -25,4 +26,4 @@ const mapStateToProps = ({ jobs, user }) => {
     }
 }
 
-export default connect(mapStateToProps)(SearchResult)
+export default connect(mapStateToProps, {savedJobs})(SearchResult)
