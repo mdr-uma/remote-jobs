@@ -27,7 +27,7 @@ class App extends Component{
                     <Route exact path='/' component={JobsContainer} /> 
                     <Route exact path='/about' component={About} /> 
                     <Route exact path='/login' component={LoginForm} />
-                    {this.props.user.username ? <Route exact path='/dashboard' component={UserContainer} /> : <Redirect to="/login"/>}
+                    {this.props.user.username ? <Route exact path='/dashboard' component={UserContainer} /> : <Redirect to="/"/>}
                     <Route exact path='/results' component={SearchResult} />
                 </BrowserRouter>
                 <Footer /> 
