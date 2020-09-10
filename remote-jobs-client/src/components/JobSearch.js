@@ -31,6 +31,7 @@ class JobSearch extends Component {
                     <input 
                         type='text'
                         placeholder="Q  Enter a Search Term"
+                        required
                         value={this.state.search}
                         onChange={this.handleOnChange}
                     />
