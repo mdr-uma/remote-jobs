@@ -14,7 +14,7 @@ class JobsController < ApplicationController
     end
 
     def create
-        job = Job.new(url: params[:job][:url], company:params[:job][:company], date:params[:job][:date], position:params[:job][:position], description:params[:job][:description])
+        job = Job.new(job_params)
         if !job.save
             job = Job.find_by(url: params[:job][:url])
         end
@@ -31,6 +31,6 @@ class JobsController < ApplicationController
     private
 
     def job_params
-        params.require(:job).permit(:url, :company, :date, :position, :description, :user_id)
+        params.require(:job).permit(:url, :company, :date, :position, :description)
     end
 end
