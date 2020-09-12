@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import NavBar from './NavBar'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import LoginForm from './LoginForm'
 import About from './About'
 import JobsContainer from '../containers/JobsContainer'
@@ -9,8 +9,6 @@ import UserContainer from '../containers/UserContainer'
 import SearchResult from './SearchResult'
 import {connect} from 'react-redux'
 import { getUser } from '../actions/loginUser'
-import {Redirect} from 'react-router-dom'
-
 
 
 class App extends Component{
