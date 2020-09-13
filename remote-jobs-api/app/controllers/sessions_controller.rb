@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
         if logged_in?
             render json: serializer_user(current_user)
         else
-            render json: {error: "No current user"}
+            render json: {error: "user not logged in."}
         end
     end
 end
