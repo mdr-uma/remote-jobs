@@ -304,6 +304,11 @@ h6{
     margin: 10px;
 }
 
+.fas.fa-heart{
+    color: red;
+    margin: 5px;
+}
+
 footer{
     grid-area: footer;
     background-color: #203040;
