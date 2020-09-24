@@ -25,7 +25,7 @@ const NavBar = (props) => {
             </nav>
             <div className="follow-me">
                 <a href="https://twitter.com/imoohma"><i className="fab fa-twitter-square"></i></a>
-                <a href="https://www.linkedin.com/in/uma-manandhar-4013491b0/"><i className="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/uma-manandhar"><i className="fab fa-linkedin"></i></a>
                 <a href=" https://github.com/mdr-uma"><i className="fab fa-github-square"></i></a>
             </div>
         </header>
