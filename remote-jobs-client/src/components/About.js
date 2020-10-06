@@ -10,10 +10,10 @@ const About = () => {
             <hr /><br/>
             <img src={img5} alt="" className="left-img"/>
             <p>This app is for the software engineers who are seeking remote jobs. Due to COVID-19, there are thousands 
-            of companies running remotely and I took this as an opportunity to build this application as my final project, 
+            of companies running remotely and I took this as an opportunity to build this application, 
             which can be beneficial for a lot of software engineers. This app is listing all the remote jobs, sorted by 
-            recent date and it's updating everyday. There is also a search feature where you can search jobs by tags. 
-            Please do not add space between words, instead use plus(+) sign in search input.  
+            recent date and it's updating each time new job is posted. There is also a search feature where you can search jobs by tags. 
+            Make sure to use only one word in search input to get accurate result.
             </p>
             <img src={image} alt="" className="right-img"/>
             <p>Users can create accounts to save the jobs they are interested on. One job can be saved only one time. 
