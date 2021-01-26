@@ -164,9 +164,9 @@ input:hover{
 
 .search-result{
     margin: auto;
-    width: 100%;
+    width: 78%;
     position: absolute;
-    left: 8%;
+    left: 9%;
     top: 50%;
 }
 
@@ -229,11 +229,12 @@ input:hover{
 
 .all-jobs{
     background-color: rgb(230, 230, 230);
-    width: 78%;
-    margin-left: 3%;
+    width: 95%;
+    margin-left: 65px;
     margin-bottom: 1%;
-    padding: .8%;
+    padding: 1%;
     text-align: center;
+    overflow: hidden;
 }
 
 .all-jobs:hover{
@@ -243,7 +244,7 @@ input:hover{
 h5{
     text-align: right;
     position: relative;
-    right: 98rem;
+    right: 90rem;
 }
 
 h6{
@@ -252,7 +253,7 @@ h6{
 
 .fas.fa-save{
     position: relative;
-    left: 50rem;
+    left: 48rem;
     color: navy;
     margin-bottom: 1rem;
     font-size: larger;
@@ -287,6 +288,7 @@ h6{
 .saved-job{
     position: absolute;
     top: 150px;
+    width: 78%;
 }
 
 .about-page{
