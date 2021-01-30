@@ -17,5 +17,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REMOTE_JOBS_C05FC }}'
           channelId: live
           projectId: remote-jobs-c05fc
+          entryPoint: './c05fc'
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
