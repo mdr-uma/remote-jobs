@@ -1,5 +1,5 @@
 export const createUser = (payload, callback) => async(dispatch) => {
-        const response = await fetch('http://localhost:3000/users', {
+    const response = await fetch('https://frozen-waters-04920.herokuapp.com/users', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

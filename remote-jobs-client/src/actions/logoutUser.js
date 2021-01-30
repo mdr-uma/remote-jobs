@@ -1,6 +1,6 @@
 export const logoutUser = (callback) => {
     return dispatch => {
-     return fetch(`http://localhost:3000/logout`, {
+        return fetch(`https://frozen-waters-04920.herokuapp.com/logout`, {
         method: "DELETE",
         credentials: "include",
         headers: {

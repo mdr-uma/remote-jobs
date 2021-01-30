@@ -1,7 +1,7 @@
 export const userJob = () => {
 
     return (dispatch) => {
-        return fetch(`http://localhost:3000/jobs`, {
+        return fetch(`https://frozen-waters-04920.herokuapp.com/jobs`, {
             credentials: "include",
             headers: {
                 "Accept": "application/json",
@@ -20,7 +20,7 @@ export const userJob = () => {
 
 export const removeJob = (id) => {
     return dispatch => {
-        return fetch(`http://localhost:3000/jobs/${id}`, {
+        return fetch(`https://frozen-waters-04920.herokuapp.com/jobs/${id}`, {
             method: "DELETE",
             credentials: "include",
             headers: {

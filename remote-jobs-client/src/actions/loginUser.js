@@ -1,5 +1,5 @@
 export const loginUser = (payload, callback) => async(dispatch) => {
-        const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("https://frozen-waters-04920.herokuapp.com/login", {
             method: "POST",
             credentials: "include",
             headers: {
@@ -18,7 +18,7 @@ export const loginUser = (payload, callback) => async(dispatch) => {
 
 export const getUser = () => { 
     return dispatch => {   
-        return fetch("http://localhost:3000/currentUser", {  
+        return fetch("https://frozen-waters-04920.herokuapp.com/currentUser", {  
             credentials: "include",         
             headers: {            
                 "Content-Type": "application/json"          

@@ -14,7 +14,7 @@ export const fetchSearchJobs = (jobs, callback) => async(dispatch) => {
 export const savedJobs = (job, user, callback) => {
 
     return (dispatch) => {
-    return fetch(`http://localhost:3000/jobs`, {
+        return fetch(`https://frozen-waters-04920.herokuapp.com/jobs`, {
         method: "POST",
         credentials: "include",
         headers: {
