@@ -5,7 +5,7 @@ This app is listing all the remote jobs, sorted by recent date and it's updating
  
 Users can create accounts to save the jobs they are interested on. One job can be saved only one time. Users who don't have an account can still view all the jobs and apply for it. Actual job links are provided in the list so you can apply it directly from there. Users who have an account will have a private dashboard where all the saved jobs stay safely and once you apply for a job it can be remove from dashboard anytime. I hope this is going to be helpful.
  
-<img src="src/images/remote-job-pic.png" alt="">
+<img src="remote-jobs-client/src/images/remote-job-pic.png" alt="">
 
 ### Installation
 To use this app, clone this repo and execute:
