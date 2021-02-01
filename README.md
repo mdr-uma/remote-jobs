@@ -7,6 +7,9 @@ Users can create accounts to save the jobs they are interested on. One job can b
  
 <img src="remote-jobs-client/src/images/remote-job-pic.png" alt="">
 
+[demo](https://www.youtube.com/watch?v=rsTp_xUZNXg&ab_channel=UmaManandhar)
+
+
 ### Installation
 To use this app, clone this repo and execute:
     
