@@ -1,24 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-class LikeButton extends React.Component{
-    state = {
-        like: 0
-    }
+const LikeButton = () => {
+    const [like, setLike] = useState(0)
 
-    handleClick = () => {
-        this.setState({
-            like: this.state.like +1
-        })
-    }
-
-    render(){
-        return(
-            <div>
-                {this.state.like}
-                <i className="fas fa-heart" onClick={this.handleClick}></i>
-            </div>
-        )
-    }
+    return (
+        <div>
+            {like}
+            <button className="btn btn-info ml-3" onClick={() => setLike(like + 1)}> Likes</button>
+        </div>
+    )
 }
 
 export default LikeButton
