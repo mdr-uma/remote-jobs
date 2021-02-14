@@ -13,7 +13,6 @@ const renderJobs = (props) => {
                     <h3>{job.company}</h3>
                     <h4>{job.position}</h4>
                     <a alt="job link" href={job.url}>{job.url}</a>
-                    {/* <h6>{job.description}</h6> */}
                     {/* <LikeButton /> */}
                     {job.slug ? <Button job={job} savedJobs={props.savedJobs} /> : <RemoveButton job={job} removeJob={props.removeJob}/>}
                     
