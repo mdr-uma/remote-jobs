@@ -164,7 +164,7 @@ input:hover{
 
 .search-result{
     margin: auto;
-    width: 78%;
+    width: 100%;
     position: absolute;
     left: 9%;
     top: 50%;
@@ -225,6 +225,11 @@ input:hover{
 .job-container{
     max-height: 800px;
     overflow-x: scroll;
+    width: 76%;
+}
+
+.saved-job-container{
+    width: 100%;
 }
 
 .all-jobs{
@@ -288,7 +293,7 @@ h6{
 .saved-job{
     position: absolute;
     top: 150px;
-    width: 78%;
+    width: 100%;
 }
 
 .about-page{
